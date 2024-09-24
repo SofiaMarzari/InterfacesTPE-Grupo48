@@ -1,7 +1,14 @@
 :root {
     --color_fondo_header_foot: #0C1935;
     --color_fondo_body: #0F2147;
+    --color_fondo_buscador: #23304D;
     --color_luz_2: #3FE03F;
+    --color_luz_1: #4CB04F;
+    --color_base_v: #3A943D;
+    --acento: #FFD700;
+    --color_estado_warning: #FFB800;
+    --color_estado_error: #FF0000;
+    --color_estado_ok: #3F6927;
 }
 
 body {
@@ -203,14 +210,14 @@ nav>ul>li>button:hover {
     width: 700px;
 }
 
-.container_login>h1,
-.container_registro>h1 {
+.container_login>h2,
+.container_registro>h2 {
     font-family: system-ui;
     color: white;
     font-weight: normal;
 }
 
-.container_registro>h1 {
+.container_registro>h2 {
     margin-bottom: 0px;
     margin-top: 10px;
 }
@@ -294,7 +301,7 @@ nav>ul>li>button:hover {
 label {
     width: 100%;
     font-family: system-ui;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 5px;
     border-style: none;
     color: white;
@@ -358,11 +365,12 @@ footer>section {
     align-items: flex-start;
 }
 
-footer>section>h3 {
+footer>section>h5 {
     color: white;
     font-family: system-ui;
     font-weight: normal;
     margin-bottom: 0px;
+    font-size: 20px;
 }
 
 .div_links_footer {
@@ -378,7 +386,7 @@ footer>section>h3 {
     font-family: system-ui;
     align-items: center;
     display: flex;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .links_footer:hover {
