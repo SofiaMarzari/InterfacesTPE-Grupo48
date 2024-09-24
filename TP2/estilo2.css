@@ -148,6 +148,11 @@ nav {
     width: 287px;
     height: 724px;
     position: absolute;
+    background-color: var(--color_fondo_header_foot);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 nav>ul {
@@ -156,11 +161,13 @@ nav>ul {
     padding-left: 0px;
     margin: 0%;
     background-color: var(--color_fondo_header_foot);
+    width: 100%;
 }
 
 nav>ul>li {
     list-style: none;
     height: 64px;
+    margin-bottom: 3px;
 }
 
 nav>ul>li>button {
@@ -171,13 +178,39 @@ nav>ul>li>button {
     color: white;
     padding: 0%;
     height: 100%;
-    background-color: var(--color_fondo_header_foot);
+    background-color: var(--color_fondo_body);
 }
 
 nav>ul>li>button:hover {
     cursor: pointer;
     background-color: var(--acento);
     color: black;
+}
+
+nav>hr {
+    width: 99%;
+    color: white;
+    margin: 7% 0% 7% 0%;
+}
+
+.section_redes_nav {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 70px;
+}
+
+.section_redes_nav>button {
+    background: none;
+    border-radius: 100%;
+    height: 30px;
+    border: solid 1px white;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 3px;
+    padding-left: 5px;
 }
 
 .no-visible {
