@@ -264,6 +264,18 @@ nav>hr {
     padding-left: 5px;
 }
 
+.btn-nav {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-nav>img {
+    width: 25px;
+    height: 25px;
+}
+
 .no-visible {
     display: none !important;
 }
