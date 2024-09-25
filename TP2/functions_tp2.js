@@ -3,11 +3,16 @@ document.addEventListener("DOMContentLoaded", function() {
     let nav = document.getElementById('nav');
     nav.classList.add("no-visible");
     let detalle_carrito = document.getElementById('detalle_carrito');
+    let detalle_perfil_avatar = document.getElementById('detalle_perfil_avatar');
+
     detalle_carrito.classList.add("no-visible");
+    detalle_perfil_avatar.classList.add("no-visible");
+
     let burger = document.getElementById('section_hamburguesa');
     burger.addEventListener('click', function() {
         nav.classList.toggle("no-visible");
     });
+    /********************************************************* */
     let btn_carrito = document.getElementById('btn-carrito');
     btn_carrito.addEventListener('click', function() {
         detalle_carrito.classList.remove("no-visible");
@@ -15,6 +20,19 @@ document.addEventListener("DOMContentLoaded", function() {
     let btn_cerrar_carrito = document.getElementById('btn-cerrar-detalle-carrito');
     btn_cerrar_carrito.addEventListener('click', function() {
         detalle_carrito.classList.add("no-visible");
+    });
+    /********************************************************* */
+    let btn_perfil = document.getElementById('btn-perfil-detalle');
+    btn_perfil.addEventListener('click', function() {
+        detalle_perfil_avatar.classList.remove("no-visible");
+    });
+    let avatar_header_perfil = document.querySelectorAll('.avatar_header');
+    avatar_header_perfil[0].addEventListener('click', function() {
+        detalle_perfil_avatar.classList.remove("no-visible");
+    });
+    let btn_cerrar_perfil = document.getElementById('btn-cerrar-detalle-perfil');
+    btn_cerrar_perfil.addEventListener('click', function() {
+        detalle_perfil_avatar.classList.add("no-visible");
     });
 
     loadLogin();

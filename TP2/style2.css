@@ -93,7 +93,7 @@ header {
     cursor: pointer;
 }
 
-#avatar_header {
+.avatar_header {
     background-image: url(uploads/images.jpg);
     width: 40px;
     height: 40px;
@@ -102,10 +102,12 @@ header {
     margin-right: 5px;
 }
 
-.section_car_avatar>h5 {
+.nickname {
     font-family: system-ui;
     color: white;
     font-weight: normal;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 
@@ -136,6 +138,54 @@ tfoot>tr>td {
     font-weight: normal;
     font-size: 14px;
     padding-bottom: 5px;
+}
+
+
+/**************************/
+
+#btn-perfil-detalle:hover {
+    cursor: pointer;
+}
+
+.avatar_header:nth-child(2):hover {
+    cursor: pointer;
+}
+
+#detalle_perfil_avatar {
+    position: absolute;
+    background-color: var(--color_fondo_header_foot);
+    top: 44.5px;
+    right: 1px;
+}
+
+#detalle_perfil_avatar>div>ul {
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: system-ui;
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+#detalle_perfil_avatar>div>ul>li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#detalle_perfil_avatar>div>ul>li:hover {
+    cursor: pointer;
+}
+
+#detalle_perfil_avatar>div>p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: system-ui;
+    color: #bbb8b8;
+    font-weight: lighter;
+    font-size: 13px;
 }
 
 
@@ -191,6 +241,7 @@ nav>hr {
     width: 99%;
     color: white;
     margin: 7% 0% 7% 0%;
+    border-bottom-width: 0px;
 }
 
 .section_redes_nav {
