@@ -83,6 +83,28 @@ function loadRegistrarse() {
     })
 }
 
+document.getElementById('4_en_linea_nav').addEventListener('click', loadJuegoEnEjecucion);
+
+function loadJuegoEnEjecucion() {
+
+    fetch('../TP2/juego_ejecucion.html').then(
+
+        function(response) {
+            if (response.ok) {
+                response.text().then(
+                    function(h) {
+                        container_AJAX.innerHTML = h;
+                    }
+                )
+            } else {
+                container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
+            }
+        }
+    ).catch(function(response) {
+        container_AJAX.innerHTML = '<h1>Error 505</h1>';
+    })
+}
+
 botones_nav.forEach(function(btn) {
     btn.addEventListener('click', loadCategoria);
 });

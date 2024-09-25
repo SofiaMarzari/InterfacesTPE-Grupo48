@@ -44,7 +44,7 @@ header {
 }
 
 .section_logo>h1 {
-    font-family: system-ui;
+    font-family: 'Nunito';
     color: white;
     margin-bottom: 0px;
     margin-top: 0px;
@@ -68,7 +68,7 @@ header {
     border-radius: 20px;
     height: 25px;
     width: 100%;
-    font-family: system-ui;
+    font-family: 'Nunito';
 }
 
 
@@ -103,7 +103,7 @@ header {
 }
 
 .nickname {
-    font-family: system-ui;
+    font-family: 'Nunito';
     color: white;
     font-weight: normal;
     margin-bottom: 0px;
@@ -133,7 +133,7 @@ header {
 
 #detalle_carrito>table>tbody,
 tfoot>tr>td {
-    font-family: system-ui;
+    font-family: 'Nunito';
     color: white;
     font-weight: normal;
     font-size: 14px;
@@ -162,7 +162,7 @@ tfoot>tr>td {
     list-style: none;
     padding-left: 20px;
     padding-right: 20px;
-    font-family: system-ui;
+    font-family: 'Nunito';
     color: white;
     font-weight: normal;
     font-size: 16px;
@@ -182,7 +182,7 @@ tfoot>tr>td {
 #detalle_perfil_avatar>div>p {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-family: system-ui;
+    font-family: 'Nunito';
     color: #bbb8b8;
     font-weight: lighter;
     font-size: 13px;
@@ -223,7 +223,7 @@ nav>ul>li {
 nav>ul>li>button {
     width: 100%;
     border: none;
-    font-family: system-ui;
+    font-family: 'Nunito';
     font-size: 14px;
     color: white;
     padding: 0%;
@@ -296,7 +296,7 @@ nav>hr {
 
 .container_login>h2,
 .container_registro>h2 {
-    font-family: system-ui;
+    font-family: 'Nunito';
     color: white;
     font-weight: normal;
 }
@@ -318,7 +318,7 @@ nav>hr {
     align-items: center;
     justify-content: center;
     padding: 5px 17px 5px 17px;
-    font-family: system-ui;
+    font-family: 'Nunito';
 }
 
 .btn-login-oauth:hover {
@@ -330,7 +330,7 @@ nav>hr {
     flex-direction: row;
     height: 0px;
     margin-bottom: 20px;
-    font-family: system-ui;
+    font-family: 'Nunito';
     font-size: 18px;
     margin-left: 5%;
 }
@@ -342,13 +342,29 @@ nav>hr {
     color: white;
 }
 
-#divisor_lateral>p {
+#divisor_lateral>p,
+#divisor_vertical>p {
     color: white;
     margin-top: 0px;
     margin-right: 10px;
     margin-left: 10px;
-    font-family: system-ui;
+    font-family: 'Nunito';
     color: white;
+}
+
+#divisor_vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    margin-top: 40px;
+}
+
+.divisor_vertical_hr {
+    border: none;
+    border-left: 1px solid white;
+    height: 200px;
+    width: 1px;
 }
 
 .formulario {
@@ -384,20 +400,21 @@ nav>hr {
 .container_label_input>input,
 label {
     width: 100%;
-    font-family: system-ui;
+    font-family: 'Nunito';
     font-size: 16px;
     border-radius: 5px;
     border-style: none;
-    color: white;
 }
 
 .container_label_input>input {
     background-color: #dedee2d1;
     height: 25px;
+    color: black;
 }
 
 .container_label_input>label {
     margin-bottom: 3px;
+    color: white;
 }
 
 .btn-form {
@@ -433,6 +450,46 @@ label {
 /******************fin - LOGIN/REGISTRO********************/
 
 
+/******************JUEGO EN EJECUCION********************/
+
+.container_juego_ejecucion {
+    max-width: 100%;
+    width: 100%;
+}
+
+.container_juego_ejecucion>.header_juego {
+    height: 100px;
+    background-color: #2e6e63;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container_juego_ejecucion>.header_juego>section>h1 {
+    color: white;
+    font-family: 'Nunito';
+    font-size: 28px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+.container_juego_ejecucion>.header_juego>.divisor_vertical_hr {
+    height: 50px !important;
+    margin: 0px !important;
+}
+
+.section_estrellas_likes {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+}
+
+
+/******************fin - JUEGO EN EJECUCION********************/
+
+
 /************FOOTER****************/
 
 footer {
@@ -451,7 +508,7 @@ footer>section {
 
 footer>section>h5 {
     color: white;
-    font-family: system-ui;
+    font-family: 'Nunito';
     font-weight: normal;
     margin-bottom: 0px;
     font-size: 20px;
@@ -467,7 +524,7 @@ footer>section>h5 {
 .links_footer {
     color: white;
     margin-bottom: 10px;
-    font-family: system-ui;
+    font-family: 'Nunito';
     align-items: center;
     display: flex;
     font-size: 16px;
