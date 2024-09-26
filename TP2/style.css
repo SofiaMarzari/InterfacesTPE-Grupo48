@@ -265,15 +265,17 @@ nav>hr {
 }
 
 .btn-nav {
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     display: flex;
     flex-direction: row;
+    padding-left: 15px;
 }
 
 .btn-nav>img {
     width: 25px;
     height: 25px;
+    margin-right: 10px;
 }
 
 .no-visible {
@@ -467,6 +469,9 @@ label {
 .container_juego_ejecucion {
     max-width: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container_juego_ejecucion>.header_juego {
@@ -496,6 +501,37 @@ label {
     flex-direction: column;
     max-width: 100%;
     align-items: center;
+}
+
+
+/***********************************************************************/
+
+.contenedor_en_ejecucion {
+    background-color: var(--color_fondo_header_foot);
+    width: 642px;
+    height: 430px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 26px;
+}
+
+.contenedor_en_ejecucion>.img_tablero_4_en_linea {
+    width: 400px;
+    height: 400px;
+}
+
+.contenedor_en_ejecucion>section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor_en_ejecucion>section>h5 {
+    color: white;
+    font-family: 'Nunito';
+    font-size: 20px;
 }
 
 
@@ -548,3 +584,42 @@ footer>section>h5 {
 
 
 /************fin FOOTER****************/
+
+@media only screen and (max-width: 392px) {
+    .container_login,
+    .container_registro {
+        width: 99%;
+    }
+    .links_footer {
+        font-size: 6px;
+    }
+    footer>section>h5 {
+        font-size: 8px;
+    }
+    #divisor_lateral>hr {
+        width: 120px;
+    }
+    nav {
+        width: 200px;
+    }
+    #btn-perfil-detalle {
+        display: none;
+    }
+    #btn-carrito>svg {
+        width: 20px;
+        height: 20px;
+    }
+    .section_buscador>form>label,
+    input {
+        display: none;
+    }
+    .section_buscador>form>button {
+        right: 0px;
+    }
+    .section_logo>img {
+        height: 40px;
+    }
+    .section_logo>h1 {
+        font-size: 12px;
+    }
+}
