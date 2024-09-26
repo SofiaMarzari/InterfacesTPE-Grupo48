@@ -481,6 +481,7 @@ label {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    width: 100%;
 }
 
 .container_juego_ejecucion>.header_juego>section>h1 {
@@ -504,7 +505,7 @@ label {
 }
 
 
-/***********************************************************************/
+/***********************************/
 
 .contenedor_en_ejecucion {
     background-color: var(--color_fondo_header_foot);
@@ -515,6 +516,7 @@ label {
     align-items: center;
     justify-content: center;
     margin-bottom: 26px;
+    margin-top: 21px;
 }
 
 .contenedor_en_ejecucion>.img_tablero_4_en_linea {
@@ -532,6 +534,94 @@ label {
     color: white;
     font-family: 'Nunito';
     font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.contenedor_en_ejecucion>section>p {
+    color: white;
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 11px;
+    margin-top: 5px;
+}
+
+#btn-jugar-en-ejecucion {
+    width: 186px;
+    height: 49px;
+    border-radius: 50px;
+    border-style: none;
+    margin-left: 12px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--acento);
+}
+
+
+/*************************************/
+
+.section_tutorial_juego {
+    /*medidas de figma: demasiado, se sale de la pantalla
+    width: 1440px;
+    height: 2959px;*/
+    max-width: 90%;
+    width: 1240px;
+    height: 100%;
+}
+
+.section_tutorial_juego>h2 {
+    color: white;
+    font-family: 'Nunito';
+    font-size: 32px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.section_tutorial_juego>p {
+    color: white;
+    font-family: 'Nunito';
+    font-size: 16px;
+    width: 100%;
+    height: 88px;
+}
+
+.section_tutorial_juego>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section_tutorial_juego>div>article {
+    /* width: 350px;*/
+}
+
+.section_tutorial_juego>div>article>h5 {
+    color: white;
+    font-family: 'Nunito';
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.section_tutorial_juego>div>article>p {
+    color: white;
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-weight: 500;
+    width: 388px;
+    height: 103px;
+}
+
+.imgs_tutorial_section {
+    /*width: 200px;
+    height: 100px;*/
 }
 
 
