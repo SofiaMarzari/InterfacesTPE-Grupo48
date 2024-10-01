@@ -1,3 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito';
+    color: white;
+}
+
 :root {
     --color_fondo_header_foot: #0C1935;
     --color_fondo_body: #0F2147;
@@ -13,80 +20,115 @@
 
 body {
     background-color: var(--color_fondo_body);
-    margin: 0%;
 }
 
-#container_ajax {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/************** GRID **************/ 
+/* Declaro areas */
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.logo-menu {
+    grid-area: logo;
+}
+
+.section_buscador {
+    grid-area: buscar;
+}
+
+.section_car_avatar{
+    grid-area: user;
+}
+
+/* Page Layout Mobile section*/
+.layout {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 9% auto 19%;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+    ;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+            "logo logo buscar buscar user user";
 }
 
 
-/************HEADER****************/
+/************** Header **************/ 
 
 header {
     background-color: var(--color_fondo_header_foot);
-    max-height: 60px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
 }
 
 
 /*************************/
+.logo-menu {
+    display: flex;
+    justify-content: space-around;
+}
 
 .section_logo {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    margin-left: 12px;
+}
+
+.section_logo:hover {
+    cursor: pointer;
 }
 
 .section_logo>h1 {
-    font-family: 'Nunito';
-    color: white;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: unset;
-    margin-left: 5px;
 }
 
-
-/*************************/
-
-.section_buscador {
-    margin-left: 30%;
-    width: 22%;
+.section_buscador>form {
+    display: flex;
+    justify-content: center;
 }
 
 .section_buscador>form>input {
     background-color: #ffffff4d;
-    color: white;
     border: none;
     border-radius: 20px;
-    height: 25px;
-    width: 100%;
-    font-family: 'Nunito';
+    width: 80%;
+}
+
+.section_buscador>form>input::placeholder {
+    font-size: 10px;
+    color: white;
 }
 
 
-/*************************/
-
 .section_car_avatar {
-    width: 30%;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    padding-right: 20px;
+    padding-right: 10px;
     align-items: center;
 }
 
 #btn-carrito {
     background: none;
     border-style: none;
-    margin-right: 30px;
+    margin-right: 15px;
 }
 
 #btn-carrito:hover {
@@ -95,34 +137,29 @@ header {
 
 .avatar_header {
     background-image: url(uploads/images.jpg);
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     background-size: contain;
     border-radius: 30px;
     margin-right: 5px;
 }
 
 .nickname {
-    font-family: 'Nunito';
-    color: white;
     font-weight: normal;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    font-size: 10px;
 }
 
 
-/**************************/
+/************** Desplegables del nav **************/ 
 
 #detalle_carrito {
     background-color: var(--color_fondo_header_foot);
     position: absolute;
-    top: 60px;
-    right: 100px;
+    top: 70px;
+    right: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
-    padding: 10px 10px 25px 10px;
 }
 
 #detalle_carrito>table {
@@ -133,8 +170,6 @@ header {
 
 #detalle_carrito>table>tbody,
 tfoot>tr>td {
-    font-family: 'Nunito';
-    color: white;
     font-weight: normal;
     font-size: 14px;
     padding-bottom: 5px;
@@ -159,13 +194,8 @@ tfoot>tr>td {
 }
 
 #detalle_perfil_avatar>div>ul {
-    list-style: none;
     padding-left: 20px;
     padding-right: 20px;
-    font-family: 'Nunito';
-    color: white;
-    font-weight: normal;
-    font-size: 16px;
 }
 
 #detalle_perfil_avatar>div>ul>li {
@@ -180,103 +210,10 @@ tfoot>tr>td {
 }
 
 #detalle_perfil_avatar>div>p {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-family: 'Nunito';
     color: #bbb8b8;
-    font-weight: lighter;
     font-size: 13px;
 }
 
-
-/************fin HEADER****************/
-
-
-/************NAV****************/
-
-nav {
-    width: 287px;
-    height: 724px;
-    position: absolute;
-    background-color: var(--color_fondo_header_foot);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-nav>ul {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0px;
-    margin: 0%;
-    background-color: var(--color_fondo_header_foot);
-    width: 100%;
-}
-
-nav>ul>li {
-    list-style: none;
-    height: 64px;
-    margin-bottom: 3px;
-}
-
-nav>ul>li>button {
-    width: 100%;
-    border: none;
-    font-family: 'Nunito';
-    font-size: 14px;
-    color: white;
-    padding: 0%;
-    height: 100%;
-    background-color: var(--color_fondo_body);
-}
-
-nav>ul>li>button:hover {
-    cursor: pointer;
-    background-color: var(--acento);
-    color: black;
-}
-
-nav>hr {
-    width: 99%;
-    color: white;
-    margin: 7% 0% 7% 0%;
-    border-bottom-width: 0px;
-}
-
-.section_redes_nav {
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-bottom: 70px;
-}
-
-.section_redes_nav>button {
-    background: none;
-    border-radius: 100%;
-    height: 30px;
-    border: solid 1px white;
-    padding-right: 0px;
-    padding-left: 0px;
-    padding-bottom: 0px;
-    padding-top: 3px;
-    padding-left: 5px;
-}
-
-.btn-nav {
-    justify-content: flex-start;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    padding-left: 15px;
-}
-
-.btn-nav>img {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-}
 
 .no-visible {
     display: none !important;
@@ -287,52 +224,136 @@ nav>hr {
 }
 
 
+/************NAV Desplegable tambien ****************/
+
+nav {
+    width: 35%;
+    position: absolute;
+    background-color: var(--color_fondo_header_foot);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+nav>a {
+    font-size: 10px;
+    opacity: 70%;
+    margin-bottom: 20px;
+}
+
+nav>ul {
+    width: 100%;
+}
+
+nav>ul>li {
+    height: 30px;
+    margin-bottom: 2px;
+    display: flex;
+}
+
+nav>ul>li>button {
+    width: 100%;
+    background-color: var(--color_fondo_body);
+    border: none;
+    font-size: 12px;
+}
+
+nav>hr {
+    width: 99%;
+    margin: 7% 0% 7% 0%;
+    border-bottom-width: 0px;
+}
+
+
+.btn-nav {
+    align-items: center;
+    display: flex;
+    padding-left: 15px;
+}
+
+.btn-nav>img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.btn-contactanos {
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    align-items: center;
+    background-color: #ff6f1c;
+    margin-bottom: 10px;
+
+}
+
+.btn-contactanos>p {
+    opacity: 100%;
+}
+
+.section_redes_nav {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.section_redes_nav>button {
+    background: none;
+    height: 30px;
+    border: none;
+}
+
+
+.no-visible {
+    display: none !important;
+}
+
+.visible {
+    display: inline !important;
+}
+
 /************fin NAV****************/
 
 
 /*****************LOGIN/REGISTRO***********************/
 
+main {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color_fondo_body);
+}
+
 .container_login,
 .container_registro {
     display: flex;
     flex-direction: column;
-    width: 550px;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
     background-color: #2e6e63;
-    max-height: 100%;
 }
 
-.container_registro {
-    width: 700px;
-}
 
 .container_login>h2,
 .container_registro>h2 {
-    font-family: 'Nunito';
-    color: white;
     font-weight: normal;
+    margin-bottom: 20px;
 }
 
-.container_registro>h2 {
-    margin-bottom: 0px;
-    margin-top: 10px;
-}
 
 .btn-login-oauth {
-    height: 25px;
-    max-width: 100%;
-    width: 100%;
+    width: 200px;
     border: none;
     border-radius: 20px;
     margin-bottom: 20px;
-    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px 17px 5px 17px;
-    font-family: 'Nunito';
 }
 
 .btn-login-oauth:hover {
@@ -341,37 +362,26 @@ nav>hr {
 
 #divisor_lateral {
     display: flex;
-    flex-direction: row;
     height: 0px;
     margin-bottom: 20px;
     font-family: 'Nunito';
     font-size: 18px;
-    margin-left: 5%;
 }
 
 #divisor_lateral>hr {
-    width: 175px;
-    margin-right: 0px;
-    margin-left: 0px;
-    color: white;
+    width: 100px;
 }
 
 #divisor_lateral>p,
 #divisor_vertical>p {
-    color: white;
     margin-top: 0px;
     margin-right: 10px;
     margin-left: 10px;
-    font-family: 'Nunito';
-    color: white;
 }
 
 #divisor_vertical {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 100%;
     margin-top: 40px;
+    margin-left: 50px;
 }
 
 .divisor_vertical_hr {
@@ -385,42 +395,22 @@ nav>hr {
     margin: 20px 0px 20px 0px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    width: 70%;
-}
-
-.container_registro>div>.formulario {
-    width: 40%;
-    margin-left: 5%;
 }
 
 .formulario>div {
-    display: flex;
-    flex-direction: column;
     width: 85%;
-    align-items: flex-start;
 }
 
 .container_label_input {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
     margin-bottom: 15px;
-    max-height: 100%;
-    width: 100%;
-}
-
-.container_label_input>input,
-label {
-    width: 100%;
-    font-family: 'Nunito';
-    font-size: 16px;
-    border-radius: 5px;
-    border-style: none;
 }
 
 .container_label_input>input {
+    border-radius: 5px;
+    border-style: none;
     background-color: #dedee2d1;
     height: 25px;
     color: black;
@@ -428,15 +418,12 @@ label {
 
 .container_label_input>label {
     margin-bottom: 3px;
-    color: white;
 }
 
 .btn-form {
-    height: 20px;
-    color: white;
     border-style: none;
     border-radius: 5px;
-    font-size: 14px;
+    width: 60px;
 }
 
 .btn-form:hover {
@@ -447,22 +434,66 @@ label {
 .div_horizontal {
     width: 275px;
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
-    color: white;
     font-size: 14px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    align-items: center;
 }
 
-.container_registro>.div_horizontal {
-    margin-bottom: 0px;
-}
 
 
 /******************fin - LOGIN/REGISTRO********************/
 
+/************FOOTER****************/
+
+footer {
+    background-color: var(--color_fondo_header_foot);
+    display: flex;
+    margin-top: 60px;
+    height: 100%;
+}
+
+footer>section {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+footer>section>h5 {
+    font-family: 'Nunito';
+    font-weight: normal;
+    margin-bottom: 0px;
+    font-size: 12px;
+}
+
+.div_links_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.links_footer {
+    margin-bottom: 10px;
+    font-family: 'Nunito';
+    align-items: center;
+    display: flex;
+    font-size: 10px;
+}
+
+.links_footer:hover {
+    cursor: pointer;
+}
+
+
+/************fin FOOTER****************/
+
+
+
+
+
+
+
+
+/** ESTO NO MODIFICAMOS NADA X AHORA **/
 
 /******************JUEGO EN EJECUCION********************/
 
@@ -485,7 +516,6 @@ label {
 }
 
 .container_juego_ejecucion>.header_juego>section>h1 {
-    color: white;
     font-family: 'Nunito';
     font-size: 28px;
     margin-top: 25px;
@@ -531,7 +561,6 @@ label {
 }
 
 .contenedor_en_ejecucion>section>h5 {
-    color: white;
     font-family: 'Nunito';
     font-size: 20px;
     font-weight: 700;
@@ -541,7 +570,6 @@ label {
 }
 
 .contenedor_en_ejecucion>section>p {
-    color: white;
     font-family: 'Nunito';
     font-size: 16px;
     font-weight: 500;
@@ -577,7 +605,6 @@ label {
 }
 
 .section_tutorial_juego>h2 {
-    color: white;
     font-family: 'Nunito';
     font-size: 32px;
     font-weight: 500;
@@ -585,7 +612,6 @@ label {
 }
 
 .section_tutorial_juego>p {
-    color: white;
     font-family: 'Nunito';
     font-size: 16px;
     width: 100%;
@@ -604,14 +630,12 @@ label {
 }
 
 .section_tutorial_juego>div>article>h5 {
-    color: white;
     font-family: 'Nunito';
     font-size: 20px;
     font-weight: 700;
 }
 
 .section_tutorial_juego>div>article>p {
-    color: white;
     font-family: 'Nunito';
     font-size: 16px;
     font-weight: 500;
@@ -628,88 +652,188 @@ label {
 /******************fin - JUEGO EN EJECUCION********************/
 
 
-/************FOOTER****************/
+/*********** HOME ************/
 
-footer {
-    background-color: var(--color_fondo_header_foot);
+/***** GRID DE HOME ******/
+
+
+.container-main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% auto 300px;
+    color: white;
+    grid-template-areas: 
+        "topjuegos"
+        "carruseles"
+        "publicidad"
+    ;
+}
+
+.mas-jugados{
+    grid-area: topjuegos;
+}
+
+.carrusel-categorias {
+    grid-area: carruseles;
+}
+
+.publicidad {
+    grid-area: publicidad;
+}
+
+/* MOBILE FIRST */
+
+.mas-jugados {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mas-jugados>img {
+    height: 150px;
+    width: 50%;
+    padding: 10px;
+}
+
+.carrusel-categorias {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+.carrousel {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+}
+.carrousel>img {
+    height: 150px;
+    width: 150px;
+    padding: 5px 8px 0px 0px;
 }
 
-footer>section {
+.publicidad {
     display: flex;
     flex-direction: column;
-    max-height: 100%;
-    align-items: flex-start;
+    justify-content: center;
+    margin-left: 5%;
 }
 
-footer>section>h5 {
-    color: white;
-    font-family: 'Nunito';
-    font-weight: normal;
-    margin-bottom: 0px;
-    font-size: 20px;
+.publicidad>img {
+    width: 95%;
+    height: 100px;
+    justify-content: center;
 }
 
-.div_links_footer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 20px;
-}
-
-.links_footer {
-    color: white;
-    margin-bottom: 10px;
-    font-family: 'Nunito';
-    align-items: center;
-    display: flex;
-    font-size: 16px;
-}
-
-.links_footer:hover {
-    cursor: pointer;
-}
+.carrusel-categorias>h3 {
+    padding-top: 20px;
+} 
 
 
-/************fin FOOTER****************/
+/* solo para pantallas superiores a 660px */ 
 
-@media only screen and (max-width: 392px) {
-    .container_login,
-    .container_registro {
-        width: 99%;
+@media only screen and (min-width: 1024px) {
+    .section_logo>img{
+        height: 40px;
+        width: 40px;
     }
-    .links_footer {
-        font-size: 6px;
+    .section_buscador{
+        width: 460px;
     }
-    footer>section>h5 {
-        font-size: 8px;
-    }
-    #divisor_lateral>hr {
-        width: 120px;
-    }
-    nav {
-        width: 200px;
-    }
-    #btn-perfil-detalle {
-        display: none;
-    }
-    #btn-carrito>svg {
-        width: 20px;
-        height: 20px;
-    }
-    .section_buscador>form>label,
-    input {
-        display: none;
-    }
-    .section_buscador>form>button {
-        right: 0px;
-    }
-    .section_logo>img {
+    
+    .section_buscador>form>input {
+        width: 100%;
         height: 40px;
     }
-    .section_logo>h1 {
-        font-size: 12px;
+    
+    .section_buscador>form>input::placeholder {
+        font-size: 16px;
+        color: white;
     }
+
+    .section_logo{
+        width: 200px;
+    }
+    .section_car_avatar{
+        width: 200px;
+        justify-content: end;
+    }
+
+    
+    #btn-carrito>svg{
+        width: 38px;
+        height: 34px;
+    }
+    
+    #btn-carrito:hover {
+        cursor: pointer;
+    }
+    
+    .avatar_header {
+        background-image: url(uploads/images.jpg);
+        width: 38px;
+        height: 36px;
+        background-size: contain;
+        border-radius: 30px;
+        margin-right: 5px;
+    }
+    
+
+    .nickname , .section_logo>h1 {
+        font-size: 20px;
+    }
+
+
+
+
+    /************FOOTER****************/
+
+    footer {
+        background-color: var(--color_fondo_header_foot);
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+
+    footer>section {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    footer>section>h5 {
+        font-family: 'Nunito';
+        font-weight: normal;
+        margin-bottom: 0px;
+        font-size: 20px;
+    }
+
+    .div_links_footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .links_footer {
+        margin-bottom: 10px;
+        font-family: 'Nunito';
+        align-items: center;
+        display: flex;
+        font-size: 16px;
+    }
+
+    
+/************fin FOOTER****************/
+
+
+/************ Formulario ****************/
+
+    .container_login{
+        width: 500px;
+        margin-bottom: 50px;
+    }
+
+
+
+
 }
