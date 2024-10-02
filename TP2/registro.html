@@ -8,157 +8,158 @@
 </head>
 <body>
     <div class="layout">
-    <header>
-        <div class="logo-menu" style="margin-left: 1%; " >
-            <section id="section_hamburguesa">
-                <svg style="width: 20px;height:30px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                    <path fill="#ffffff"
-                        d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
-                </svg>
-            </section>
-            <section class="section_logo">
-                <img style="height: 30px;" src="uploads/LOGARDO.png" alt="logo">
-                <h1>Tuda<br>Juegos</h1>
-            </section>
-        </div>
-        <section class="section_buscador">
-            <form action="buscar" method="get"
-                enctype="multipart/form-data">
-                <input type="text" placeholder="Buscar">
-                <button
-                    style="background: none;border: none;position: relative;right: 20px;display: flex;align-items: center;"
-                    type="submit"><svg style="width:10px;height:10px;" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <header>
+            <div class="logo-menu">
+                <section id="section_hamburguesa">
+                    <svg class="img-hamburguesa" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                         <path fill="#ffffff"
-                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                </section>
+                <section class="section_logo">
+                    <img class="img-logo" src="uploads/LOGARDO.png" alt="logo">
+                    <h1>Tuda<br>Juegos</h1>
+                </section>
+            </div>
+            <section class="section_buscador">
+                <form action="buscar" method="get"
+                    enctype="multipart/form-data">
+                    <input type="text" placeholder="Buscar">
+                    <button
+                        style="background: none;border: none;position: relative;right: 20px;display: flex;align-items: center;"
+                        type="submit"><svg class="img-lupa" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#ffffff"
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg>
+                    </button>
+                </form>
+            </section>
+            <section class="section_car_avatar">
+                <button id="btn-carrito"><svg class="img-carrito" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="rgb(68, 184, 60)"
+                            d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
                     </svg></button>
-            </form>
-        </section>
-        <section class="section_car_avatar">
-            <button id="btn-carrito"><svg style="width:15px;height:15px;" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                    <path fill="rgb(68, 184, 60)"
-                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
-                </svg></button>
-            <article class="avatar_header"></article>
-            <h5 class="nickname" id="btn-perfil-detalle">NombreUSR</h5>
-            <article id="detalle_carrito">
-                <div style="display: flex;align-items: center;justify-content: right;width: 100%;">
-                    <h4 style="font-family: system-ui;font-weight: 400;margin-bottom: 0px;margin-top: 0px;margin-right: 20%;">Tus compras</h4>
-                    <button style="background: none;border: none;cursor: pointer;" id="btn-cerrar-detalle-carrito"><svg  style="width: 20px;height:20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button>
-                </div>
-                <table>
-                    <tr>
-                        <td style="padding-right: 90px;">Pókemon</td>
-                        <td>$ 1900</td>
-                    </tr>
-                    <tr>
-                        <td>NBA 2K24</td>
-                        <td>$ 2500</td>
-                    </tr>
-                    <tr>
-                        <td>Assasins Creed III</td>
-                        <td>$ 888</td>
-                    </tr>
-                    <tfoot>
+                <article class="avatar_header"></article>
+                <h5 class="nickname" id="btn-perfil-detalle">NombreUSR</h5>
+                <article id="detalle_carrito">
+                    <div style="display: flex;align-items: center;justify-content: right;width: 100%;">
+                        <h4 style="font-family: system-ui;font-weight: 400;margin-bottom: 0px;margin-top: 0px;margin-right: 20%;">Tus compras</h4>
+                        <button style="background: none;border: none;cursor: pointer;" id="btn-cerrar-detalle-carrito"><svg  style="width: 20px;height:20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button>
+                    </div>
+                    <table>
                         <tr>
-                            <td style="color: rgb(242 211 0);font-weight: 600;">Total:</td>
-                            <td style="color: rgb(242 211 0);font-weight: 600;">$5288</td>
+                            <td style="padding-right: 90px;">Pókemon</td>
+                            <td>$ 1900</td>
                         </tr>
-                    </tfoot>
-                </table>
-                <button class="btn-login-oauth" id="btn_carrito_comprar" style="color: white;background-color: #ff6f1c;width: 70%;font-size: 12px;">Comprar</button>
-            </article>
-            <article id="detalle_perfil_avatar">
-                <div style="display: flex;justify-content: end;">
-                    <button style="background: none;border: none;cursor: pointer;" id="btn-cerrar-detalle-perfil"><svg  style="width: 20px;height:20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#fafcff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button>
-                </div>
-                <div style="display: flex;flex-direction: column;align-items: center;">
-                    <article class="avatar_header"></article>
-                    <h5 class="nickname">NombreUSR</h5>
-                    <p>enzoflores@gmail.com</p>
-                </div>
-                <div>
-                    <ul>
-                        <li>
-                            <svg style="width: 12px;height:12px;margin-right:10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font
-                            Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License -
-                            https://fontawesome.com/license/free Copyright 2024 Fonticons,
-                            Inc.--><path fill="#ffffff" d="M224 256A128 128 0 1 0 224 0a128 128 0
-                            1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7
-                            512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7
-                            304l-91.4 0z"/></svg> Mi perfil</li>
-                        <li><svg style="width: 12px;height:12px;margin-right:10px;" xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0
-                            512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome -
-                            https://fontawesome.com License - https://fontawesome.com/license/free
-                            Copyright 2024 Fonticons, Inc.--><path fill="#f6f9fe" d="M471.6
-                            21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9
-                            30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1
-                            6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7
-                            24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3
-                            172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0
-                            96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3
-                            32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96
-                            0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"/></svg> Editar perfil
-                        </li>
-                        <li>
-                            <svg style="width: 12px;height:12px;margin-right:10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font
-                            Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License -
-                            https://fontawesome.com/license/free Copyright 2024 Fonticons,
-                            Inc.--><path fill="#fafcff" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1
-                            29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1
-                            19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3
-                            28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8
-                            17.1-54 17.1-76.8 0L0 176z"/></svg> Notificaciones</li>
-                        <li><svg style="width: 12px;height:12px;margin-right:10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font
-                            Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License -
-                            https://fontawesome.com/license/free Copyright 2024 Fonticons,
-                            Inc.--><path fill="#fafafa" d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7
-                            82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7
-                            8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9
-                            38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8l0 378.1C394 378
-                            431.1 230.1 432 141.4L256 66.8s0 0 0 0z"/></svg> Control de privacidad
-                        </li>
-                        <li>
-                            <svg style="width: 12px;height:12px;margin-right:10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font
-                            Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License -
-                            https://fontawesome.com/license/free Copyright 2024 Fonticons,
-                            Inc.--><path fill="#ffffff" d="M495.9 166.6c3.2 8.7 .5 18.4-6.4
-                            24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3
-                            39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7
-                            8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5
-                            6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9
-                            16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5
-                            3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1
-                            425.9c-8.8 2.8-18.6
-                            .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4
-                            6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4
-                            191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3
-                            15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6
-                            24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3
-                            18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7
-                            18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8
-                            18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4
-                            15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg> Configuración de cuenta
-                        </li>
-                        <li>
-                            <svg style="width: 12px;height:12px;margin-right:10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font
-                            Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License -
-                            https://fontawesome.com/license/free Copyright 2024 Fonticons,
-                            Inc.--><path fill="#ffffff" d="M502.6 278.6c12.5-12.5 12.5-32.8
-                            0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7
-                            224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4
-                            73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7
-                            0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96
-                            96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7
-                            0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"/></svg> Cerrar sesión
-                        </li>
-                    </ul>
-                </div>
-            </article>
-        </section>
-    </header>
+                        <tr>
+                            <td>NBA 2K24</td>
+                            <td>$ 2500</td>
+                        </tr>
+                        <tr>
+                            <td>Assasins Creed III</td>
+                            <td>$ 888</td>
+                        </tr>
+                        <tfoot>
+                            <tr>
+                                <td style="color: rgb(242 211 0);font-weight: 600;">Total:</td>
+                                <td style="color: rgb(242 211 0);font-weight: 600;">$5288</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <button class="btn-login-oauth" id="btn_carrito_comprar" style="color: white;background-color: #ff6f1c;width: 70%;font-size: 12px;">Comprar</button>
+                </article>
+                <article id="detalle_perfil_avatar">
+                    <div style="display: flex;justify-content: end;">
+                        <button style="background: none;border: none;cursor: pointer;" id="btn-cerrar-detalle-perfil"><svg  style="width: 20px;height:20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#fafcff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button>
+                    </div>
+                    <div style="display: flex;flex-direction: column;align-items: center;">
+                        <article class="avatar_header"></article>
+                        <h5 class="nickname">NombreUSR</h5>
+                        <p>enzoflores@gmail.com</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <svg style="width: 12px;height:12px;margin-right:10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font
+                                Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License -
+                                https://fontawesome.com/license/free Copyright 2024 Fonticons,
+                                Inc.--><path fill="#ffffff" d="M224 256A128 128 0 1 0 224 0a128 128 0
+                                1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7
+                                512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7
+                                304l-91.4 0z"/></svg> Mi perfil</li>
+                            <li><svg style="width: 12px;height:12px;margin-right:10px;" xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0
+                                512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome -
+                                https://fontawesome.com License - https://fontawesome.com/license/free
+                                Copyright 2024 Fonticons, Inc.--><path fill="#f6f9fe" d="M471.6
+                                21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9
+                                30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1
+                                6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7
+                                24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3
+                                172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0
+                                96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3
+                                32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96
+                                0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"/></svg> Editar perfil
+                            </li>
+                            <li>
+                                <svg style="width: 12px;height:12px;margin-right:10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font
+                                Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License -
+                                https://fontawesome.com/license/free Copyright 2024 Fonticons,
+                                Inc.--><path fill="#fafcff" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1
+                                29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1
+                                19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3
+                                28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8
+                                17.1-54 17.1-76.8 0L0 176z"/></svg> Notificaciones</li>
+                            <li><svg style="width: 12px;height:12px;margin-right:10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font
+                                Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License -
+                                https://fontawesome.com/license/free Copyright 2024 Fonticons,
+                                Inc.--><path fill="#fafafa" d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7
+                                82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7
+                                8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9
+                                38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8l0 378.1C394 378
+                                431.1 230.1 432 141.4L256 66.8s0 0 0 0z"/></svg> Control de privacidad
+                            </li>
+                            <li>
+                                <svg style="width: 12px;height:12px;margin-right:10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font
+                                Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License -
+                                https://fontawesome.com/license/free Copyright 2024 Fonticons,
+                                Inc.--><path fill="#ffffff" d="M495.9 166.6c3.2 8.7 .5 18.4-6.4
+                                24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3
+                                39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7
+                                8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5
+                                6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9
+                                16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5
+                                3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1
+                                425.9c-8.8 2.8-18.6
+                                .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4
+                                6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4
+                                191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3
+                                15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6
+                                24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3
+                                18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7
+                                18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8
+                                18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4
+                                15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg> Configuración de cuenta
+                            </li>
+                            <li>
+                                <svg style="width: 12px;height:12px;margin-right:10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font
+                                Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License -
+                                https://fontawesome.com/license/free Copyright 2024 Fonticons,
+                                Inc.--><path fill="#ffffff" d="M502.6 278.6c12.5-12.5 12.5-32.8
+                                0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7
+                                224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4
+                                73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7
+                                0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96
+                                96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7
+                                0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"/></svg> Cerrar sesión
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </header>
     
     <nav id="nav">
         <ul>

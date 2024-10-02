@@ -84,7 +84,27 @@ header {
 .logo-menu {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    margin-left: 1%
 }
+
+.img-hamburguesa{
+    width: 20px;
+    height:30px; 
+    cursor: pointer;
+}
+
+
+.img-logo{
+    height: 30px;
+    width: 30px;
+}
+
+.img-lupa{
+    width: 8px;
+    height: 10px;
+}
+
 
 .section_logo {
     display: flex;
@@ -95,6 +115,7 @@ header {
 .section_logo:hover {
     cursor: pointer;
 }
+
 
 .section_logo>h1 {
     font-size: 12px;
@@ -118,6 +139,10 @@ header {
     color: white;
 }
 
+.img-carrito{
+    width: 15px;
+    height: 15px;
+}
 
 .section_car_avatar {
     display: flex;
@@ -260,7 +285,7 @@ nav>ul>li>button {
 
 nav>hr {
     width: 99%;
-    margin: 7% 0% 7% 0%;
+    margin: 20px 0% 20px 0%;
     border-bottom-width: 0px;
 }
 
@@ -279,14 +304,17 @@ nav>hr {
 
 .btn-contactanos {
     border: none;
-    border-radius: 10px;
+    border-radius: 50px;
     display: flex;
     justify-content: space-evenly;
     width: 70%;
     align-items: center;
     background-color: #ff6f1c;
     margin-bottom: 10px;
+}
 
+.btn-contactanos>svg{
+    width: 10px;
 }
 
 .btn-contactanos>p {
@@ -306,6 +334,11 @@ nav>hr {
     border: none;
 }
 
+.img-redes{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
 
 .no-visible {
     display: none !important;
@@ -409,7 +442,7 @@ main {
 }
 
 .container_label_input>input {
-    border-radius: 5px;
+    border-radius: 10px;
     border-style: none;
     background-color: #dedee2d1;
     height: 25px;
@@ -421,9 +454,19 @@ main {
 }
 
 .btn-form {
+    background-color:rgb(68 ,184, 60) ;
+    border-style: none;
+    border-radius: 10px;
+    height: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 90%;
+}
+
+#btn_registrarse_nav{
     border-style: none;
     border-radius: 5px;
-    width: 60px;
+    padding: 2px;
 }
 
 .btn-form:hover {
@@ -729,13 +772,31 @@ footer>section>h5 {
 } 
 
 
-/* solo para pantallas superiores a 660px */ 
+/* solo para pantallas superiores a 1024px */ 
 
 @media only screen and (min-width: 1024px) {
-    .section_logo>img{
-        height: 40px;
-        width: 40px;
+
+    /************    HEADER    ****************/
+
+    .img-hamburguesa{
+        width: 35px;
+        height:35px; 
     }
+    
+    .img-logo{
+        height: 60px;
+        width: 60px;
+    }
+
+    .img-carrito{
+        width: 30px;
+        height: 30px;
+    }
+
+    .nickname , .section_logo>h1 {
+        font-size: 20px;
+    }
+
     .section_buscador{
         width: 460px;
     }
@@ -745,95 +806,152 @@ footer>section>h5 {
         height: 40px;
     }
     
+    .img-lupa{
+        width: 14px;
+        height: 14px;
+    }
+    
+    
     .section_buscador>form>input::placeholder {
         font-size: 16px;
         color: white;
     }
 
-    .section_logo{
-        width: 200px;
-    }
-    .section_car_avatar{
-        width: 200px;
-        justify-content: end;
+    #btn-carrito {
+        margin-right: 25px;
     }
 
-    
-    #btn-carrito>svg{
-        width: 38px;
-        height: 34px;
-    }
-    
-    #btn-carrito:hover {
-        cursor: pointer;
-    }
-    
     .avatar_header {
-        background-image: url(uploads/images.jpg);
         width: 38px;
         height: 36px;
-        background-size: contain;
-        border-radius: 30px;
-        margin-right: 5px;
     }
     
-
-    .nickname , .section_logo>h1 {
-        font-size: 20px;
+    .section_car_avatar{
+        margin-right: 30px;
     }
 
+    .logo-menu{
+        margin-left: 30px;
+    }
+    /************  FIN  HEADER    ****************/
 
-
-
-    /************FOOTER****************/
+    /************   FOOTER    ****************/
 
     footer {
-        background-color: var(--color_fondo_header_foot);
-        display: flex;
-        flex-direction: row;
         justify-content:space-around;
     }
 
-    footer>section {
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    footer>section>h5 {
-        font-family: 'Nunito';
-        font-weight: normal;
-        margin-bottom: 0px;
-        font-size: 20px;
-    }
-
-    .div_links_footer {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+    footer>section{
         margin-top: 20px;
     }
 
+    footer>section>h5 {
+        font-size: 20px;
+    }
+
     .links_footer {
-        margin-bottom: 10px;
-        font-family: 'Nunito';
-        align-items: center;
-        display: flex;
         font-size: 16px;
     }
 
     
-/************fin FOOTER****************/
+    /************FIN FOOTER****************/
 
 
-/************ Formulario ****************/
+    /************    FORMULARIO    ****************/
 
     .container_login{
-        width: 500px;
-        margin-bottom: 50px;
+        width: 623px;
+        height: 700px;
+    }
+
+    .container_login>h2, .container_registro>h2{
+        font-size: 32px;
+    }
+
+    .btn-login-oauth{
+        width: 297px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    #divisor_lateral>hr{
+        width: 210px;
+    }
+    #divisor_lateral>p{
+        margin-top: -10px;
+    }
+
+    .formulario>div {
+        width: 409px;
+    }
+
+    .container_label_input>input{
+        height: 35px;
     }
 
 
+    .btn-form {
+        width: 490px;
+        height: 45px;
+        font-size: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #btn_registrarse_nav{
+        width: 100px;
+        height: 19px;
+    }
+
+    .div_horizontal{
+        width: 70%;
+        font-size: 16px;
+    }
 
 
+    /************   FIN FORMULARIO    ****************/
+
+    /************   NAV    ****************/
+
+    nav{
+        width: 287px;
+        height: 724px;
+    }
+
+    nav>ul>li{
+        height: 64px;
+    }
+
+    .btn-nav{
+        font-size: 20px;
+    }
+
+    .btn-contactanos{
+        width: 237px;
+        height: 33px;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    nav>a{
+        margin-top: 60px;
+        font-size: 16px;
+    }
+
+    .btn-nav>img {
+        width: 34px;
+        height: 34px;
+        margin-right: 21px;
+    }
+
+    .img-redes{
+        width: 35px;
+        height: 35px;
+    }
+
+    .btn-contactanos>svg{
+        width: 20px;
+    }
+
+    
 }
