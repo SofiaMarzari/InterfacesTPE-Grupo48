@@ -190,14 +190,12 @@ header {
 #detalle_carrito>table {
     margin-bottom: 25px;
     margin-top: 15px;
-    border-spacing: 7px;
+    border-spacing: 10px;
 }
 
-#detalle_carrito>table>tbody,
-tfoot>tr>td {
+#detalle_carrito>table>tbody, tfoot>tr>td {
     font-weight: normal;
     font-size: 14px;
-    padding-bottom: 5px;
 }
 
 
@@ -953,5 +951,34 @@ footer>section>h5 {
         width: 20px;
     }
 
+    /************  FIN NAV    ****************/
+
+     /************  DESPLEGABLES    ****************/
+
+    #detalle_perfil_avatar{
+        top: 70px;
+        width: 290px;
+        height: 340px;
+    }
+
+
+    #detalle_perfil_avatar>div>p{
+        margin-bottom: 22px;
+        font-size: 16px;
+    }
+
+    #detalle_perfil_avatar>div>ul {
+        font-size: 20px;
+    }
+
+    #detalle_carrito{
+        font-size: 24px;
+        width: 300px;
+        height: 280px;
+    }
     
+    #detalle_carrito>table>tbody, tfoot>tr>td {
+        font-size: 20px;
+    }
+
 }
