@@ -351,13 +351,11 @@ nav>hr {
 /*****************LOGIN/REGISTRO***********************/
 
 main {
-    display: flex;
-    justify-content: center;
     background-color: var(--color_fondo_body);
 }
 
-.container_login,
-.container_registro {
+
+.container_login, .container_registro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -402,15 +400,10 @@ main {
 
 #divisor_lateral>p,
 #divisor_vertical>p {
-    margin-top: 0px;
     margin-right: 10px;
     margin-left: 10px;
 }
 
-#divisor_vertical {
-    margin-top: 40px;
-    margin-left: 50px;
-}
 
 .divisor_vertical_hr {
     border: none;
@@ -508,6 +501,7 @@ footer>section>h5 {
     flex-direction: column;
     align-items: flex-start;
     margin-top: 20px;
+    opacity: 70%;
 }
 
 .links_footer {
@@ -522,13 +516,10 @@ footer>section>h5 {
     cursor: pointer;
 }
 
-
 /************fin FOOTER****************/
 
 
 /*********** HOME ************/
-
-
 /***** GRID DE HOME ******/
 
 .container-main {
@@ -684,12 +675,13 @@ footer>section>h5 {
     #divisor_lateral>p {
         margin-top: -10px;
     }
-    .formulario>div {
+
+    .container_login>.formulario>div>div>input{
         width: 409px;
-    }
-    .container_label_input>input {
         height: 35px;
+        border:solid 1px #78C97A;
     }
+
     .btn-form {
         width: 490px;
         height: 45px;
@@ -702,10 +694,56 @@ footer>section>h5 {
         height: 19px;
     }
     .div_horizontal {
-        width: 70%;
+        width: 50%;
         font-size: 16px;
+        align-items: center;
     }
     /************   FIN FORMULARIO    ****************/
+
+    /************   REGISTRO    ****************/
+
+    .container_registro{
+        width: 700px;
+        height: 750px;
+    }
+
+    .container_registro>div>.formulario>div>div>input{
+        width: 250px;
+        height: 28px;
+        border:solid 1px #78C97A;
+    }
+
+    .container_registro>div>form>.btn-form{
+        width: 100%;
+        height: 45px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    
+    .container_registro>div>section>div{
+        margin-bottom: 180px;
+
+    }
+    .container_registro>div>section>div>button{
+        width: 250px;
+        height: 35px;
+        margin-bottom: 37px;
+    }
+
+    .container_registro>div>article{
+        margin-top: 40px;
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container_registro>div>article>p{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+
+
     /************   NAV    ****************/
     nav {
         width: 287px;
