@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'Nunito';
@@ -22,7 +22,10 @@ body {
     background-color: var(--color_fondo_body);
 }
 
-/************** GRID **************/ 
+
+/************** GRID **************/
+
+
 /* Declaro areas */
 
 header {
@@ -45,31 +48,28 @@ footer {
     grid-area: buscar;
 }
 
-.section_car_avatar{
+.section_car_avatar {
     grid-area: user;
 }
 
+
 /* Page Layout Mobile section*/
+
 .layout {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 9% auto 19%;
-    grid-template-areas: 
-        "header"
-        "main"
-        "footer"
-    ;
+    grid-template-areas: "header" "main" "footer";
 }
 
 .header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-            "logo logo buscar buscar user user";
+    grid-template-areas: "logo logo buscar buscar user user";
 }
 
 
-/************** Header **************/ 
+/************** Header **************/
 
 header {
     background-color: var(--color_fondo_header_foot);
@@ -81,6 +81,7 @@ header {
 
 
 /*************************/
+
 .logo-menu {
     display: flex;
     justify-content: space-around;
@@ -88,23 +89,21 @@ header {
     margin-left: 1%
 }
 
-.img-hamburguesa{
+.img-hamburguesa {
     width: 20px;
-    height:30px; 
+    height: 30px;
     cursor: pointer;
 }
 
-
-.img-logo{
+.img-logo {
     height: 30px;
     width: 30px;
 }
 
-.img-lupa{
+.img-lupa {
     width: 8px;
     height: 10px;
 }
-
 
 .section_logo {
     display: flex;
@@ -115,7 +114,6 @@ header {
 .section_logo:hover {
     cursor: pointer;
 }
-
 
 .section_logo>h1 {
     font-size: 12px;
@@ -139,7 +137,7 @@ header {
     color: white;
 }
 
-.img-carrito{
+.img-carrito {
     width: 15px;
     height: 15px;
 }
@@ -175,7 +173,7 @@ header {
 }
 
 
-/************** Desplegables del nav **************/ 
+/************** Desplegables del nav **************/
 
 #detalle_carrito {
     background-color: var(--color_fondo_header_foot);
@@ -193,7 +191,8 @@ header {
     border-spacing: 10px;
 }
 
-#detalle_carrito>table>tbody, tfoot>tr>td {
+#detalle_carrito>table>tbody,
+tfoot>tr>td {
     font-weight: normal;
     font-size: 14px;
 }
@@ -237,7 +236,6 @@ header {
     font-size: 13px;
 }
 
-
 .no-visible {
     display: none !important;
 }
@@ -258,6 +256,7 @@ nav {
     align-items: center;
     margin-top: 70px;
 }
+
 nav>a {
     font-size: 10px;
     opacity: 70%;
@@ -287,7 +286,6 @@ nav>hr {
     border-bottom-width: 0px;
 }
 
-
 .btn-nav {
     align-items: center;
     display: flex;
@@ -311,7 +309,7 @@ nav>hr {
     margin-bottom: 10px;
 }
 
-.btn-contactanos>svg{
+.btn-contactanos>svg {
     width: 10px;
 }
 
@@ -332,7 +330,7 @@ nav>hr {
     border: none;
 }
 
-.img-redes{
+.img-redes {
     width: 15px;
     height: 15px;
     margin-right: 5px;
@@ -345,6 +343,7 @@ nav>hr {
 .visible {
     display: inline !important;
 }
+
 
 /************fin NAV****************/
 
@@ -368,13 +367,11 @@ main {
     background-color: #2e6e63;
 }
 
-
 .container_login>h2,
 .container_registro>h2 {
     font-weight: normal;
     margin-bottom: 20px;
 }
-
 
 .btn-login-oauth {
     width: 200px;
@@ -452,7 +449,7 @@ main {
 }
 
 .btn-form {
-    background-color:rgb(68 ,184, 60) ;
+    background-color: rgb(68, 184, 60);
     border-style: none;
     border-radius: 10px;
     height: 35px;
@@ -461,10 +458,11 @@ main {
     width: 90%;
 }
 
-#btn_registrarse_nav{
+#btn_registrarse_nav {
     border-style: none;
     border-radius: 5px;
     padding: 2px;
+    cursor: pointer;
 }
 
 .btn-form:hover {
@@ -480,8 +478,8 @@ main {
 }
 
 
-
 /******************fin - LOGIN/REGISTRO********************/
+
 
 /************FOOTER****************/
 
@@ -528,208 +526,44 @@ footer>section>h5 {
 /************fin FOOTER****************/
 
 
-
-
-
-
-
-
-/** ESTO NO MODIFICAMOS NADA X AHORA **/
-
-/******************JUEGO EN EJECUCION********************/
-
-.container_juego_ejecucion {
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.container_juego_ejecucion>.header_juego {
-    height: 100px;
-    background-color: #2e6e63;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-}
-
-.container_juego_ejecucion>.header_juego>section>h1 {
-    font-family: 'Nunito';
-    font-size: 28px;
-    margin-top: 25px;
-    margin-bottom: 0px;
-}
-
-.container_juego_ejecucion>.header_juego>.divisor_vertical_hr {
-    height: 50px !important;
-    margin: 0px !important;
-}
-
-.section_estrellas_likes {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    align-items: center;
-}
-
-
-/***********************************/
-
-.contenedor_en_ejecucion {
-    background-color: var(--color_fondo_header_foot);
-    width: 642px;
-    height: 430px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 26px;
-    margin-top: 21px;
-}
-
-.contenedor_en_ejecucion>.img_tablero_4_en_linea {
-    width: 400px;
-    height: 400px;
-}
-
-.contenedor_en_ejecucion>section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contenedor_en_ejecucion>section>h5 {
-    font-family: 'Nunito';
-    font-size: 20px;
-    font-weight: 700;
-    font-style: normal;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-
-.contenedor_en_ejecucion>section>p {
-    font-family: 'Nunito';
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 11px;
-    margin-top: 5px;
-}
-
-#btn-jugar-en-ejecucion {
-    width: 186px;
-    height: 49px;
-    border-radius: 50px;
-    border-style: none;
-    margin-left: 12px;
-    font-size: 18px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--acento);
-}
-
-
-/*************************************/
-
-.section_tutorial_juego {
-    /*medidas de figma: demasiado, se sale de la pantalla
-    width: 1440px;
-    height: 2959px;*/
-    max-width: 90%;
-    width: 1240px;
-    height: 100%;
-}
-
-.section_tutorial_juego>h2 {
-    font-family: 'Nunito';
-    font-size: 32px;
-    font-weight: 500;
-    width: 100%;
-}
-
-.section_tutorial_juego>p {
-    font-family: 'Nunito';
-    font-size: 16px;
-    width: 100%;
-    height: 88px;
-}
-
-.section_tutorial_juego>div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.section_tutorial_juego>div>article {
-    /* width: 350px;*/
-}
-
-.section_tutorial_juego>div>article>h5 {
-    font-family: 'Nunito';
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.section_tutorial_juego>div>article>p {
-    font-family: 'Nunito';
-    font-size: 16px;
-    font-weight: 500;
-    width: 388px;
-    height: 103px;
-}
-
-.imgs_tutorial_section {
-    /*width: 200px;
-    height: 100px;*/
-}
-
-
-/******************fin - JUEGO EN EJECUCION********************/
-
-
 /*********** HOME ************/
+
 
 /***** GRID DE HOME ******/
 
-
 .container-main {
+    max-width: 100%;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 40% auto 300px;
     color: white;
-    grid-template-areas: 
-        "topjuegos"
-        "carruseles"
-        "publicidad"
-    ;
+    grid-template-areas: "topjuegos" "carruseles" "publicidad";
 }
-
-.mas-jugados{
-    grid-area: topjuegos;
-}
-
-.carrusel-categorias {
-    grid-area: carruseles;
-}
-
-.publicidad {
-    grid-area: publicidad;
-}
-
-/* MOBILE FIRST */
 
 .mas-jugados {
+    grid-area: topjuegos;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.carrusel-categorias {
+    grid-area: carruseles;
+    display: flex;
+    flex-direction: column;
+}
+
+.publicidad {
+    grid-area: publicidad;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+
+/* MOBILE FIRST */
 
 .mas-jugados>img {
     height: 150px;
@@ -737,26 +571,15 @@ footer>section>h5 {
     padding: 10px;
 }
 
-.carrusel-categorias {
-    display: flex;
-    flex-direction: column;
-    margin-left: 5%;
-}
 .carrousel {
     display: flex;
     flex-direction: row;
 }
-.carrousel>img {
-    height: 150px;
-    width: 150px;
-    padding: 5px 8px 0px 0px;
-}
 
-.publicidad {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 5%;
+.carrousel>img {
+    height: 100px;
+    width: 100px;
+    padding: 5px 8px 0px 0px;
 }
 
 .publicidad>img {
@@ -767,127 +590,106 @@ footer>section>h5 {
 
 .carrusel-categorias>h3 {
     padding-top: 20px;
-} 
+}
 
 
-/* solo para pantallas superiores a 1024px */ 
+/* solo para pantallas superiores a 1024px */
 
 @media only screen and (min-width: 1024px) {
-
-    /************    HEADER    ****************/
-
-    .img-hamburguesa{
-        width: 35px;
-        height:35px; 
+    .container-main {
+        width: 100%;
     }
-    
-    .img-logo{
+    /************    HEADER    ****************/
+    .img-hamburguesa {
+        width: 35px;
+        height: 35px;
+    }
+    .img-logo {
         height: 60px;
         width: 60px;
     }
-
-    .img-carrito{
+    .img-carrito {
         width: 30px;
         height: 30px;
     }
-
-    .nickname , .section_logo>h1 {
+    .nickname,
+    .section_logo>h1 {
         font-size: 20px;
     }
-
-    .section_buscador{
+    .section_buscador {
         width: 460px;
     }
-    
     .section_buscador>form>input {
         width: 100%;
         height: 40px;
     }
-    
-    .img-lupa{
+    .img-lupa {
         width: 14px;
         height: 14px;
     }
-    
-    
     .section_buscador>form>input::placeholder {
         font-size: 16px;
         color: white;
     }
-
     #btn-carrito {
         margin-right: 25px;
     }
-
     .avatar_header {
         width: 38px;
         height: 36px;
     }
-    
-    .section_car_avatar{
+    .section_car_avatar {
         margin-right: 30px;
     }
-
-    .logo-menu{
+    .logo-menu {
         margin-left: 30px;
     }
     /************  FIN  HEADER    ****************/
-
     /************   FOOTER    ****************/
-
     footer {
-        justify-content:space-around;
+        justify-content: space-around;
     }
-
-    footer>section{
+    footer>section {
         margin-top: 20px;
     }
-
     footer>section>h5 {
         font-size: 20px;
     }
-
     .links_footer {
         font-size: 16px;
     }
-
-    
     /************FIN FOOTER****************/
-
-
+    /**************HOME**********************/
+    .carrusel-categorias {
+        margin-left: 5%;
+    }
+    /**************fin - HOME****************/
     /************    FORMULARIO    ****************/
-
-    .container_login{
+    .container_login {
         width: 623px;
         height: 700px;
     }
-
-    .container_login>h2, .container_registro>h2{
+    .container_login>h2,
+    .container_registro>h2 {
         font-size: 32px;
     }
-
-    .btn-login-oauth{
+    .btn-login-oauth {
         width: 297px;
         height: 36px;
         font-size: 16px;
     }
-
-    #divisor_lateral>hr{
+    #divisor_lateral>hr {
         width: 210px;
     }
-    #divisor_lateral>p{
+    #divisor_lateral>p {
         margin-top: -10px;
     }
-
     .formulario>div {
         width: 409px;
     }
-
-    .container_label_input>input{
+    .container_label_input>input {
         height: 35px;
     }
-
-
     .btn-form {
         width: 490px;
         height: 45px;
@@ -895,90 +697,199 @@ footer>section>h5 {
         margin-top: 50px;
         margin-bottom: 50px;
     }
-
-    #btn_registrarse_nav{
+    #btn_registrarse_nav {
         width: 100px;
         height: 19px;
     }
-
-    .div_horizontal{
+    .div_horizontal {
         width: 70%;
         font-size: 16px;
     }
-
-
     /************   FIN FORMULARIO    ****************/
-
     /************   NAV    ****************/
-
-    nav{
+    nav {
         width: 287px;
         height: 724px;
     }
-
-    nav>ul>li{
+    nav>ul>li {
         height: 64px;
     }
-
-    .btn-nav{
+    .btn-nav {
         font-size: 20px;
     }
-
-    .btn-contactanos{
+    .btn-contactanos {
         width: 237px;
         height: 33px;
         font-size: 16px;
         margin-bottom: 30px;
     }
-
-    nav>a{
+    nav>a {
         margin-top: 60px;
         font-size: 16px;
     }
-
     .btn-nav>img {
         width: 34px;
         height: 34px;
         margin-right: 21px;
     }
-
-    .img-redes{
+    .img-redes {
         width: 35px;
         height: 35px;
     }
-
-    .btn-contactanos>svg{
+    .btn-contactanos>svg {
         width: 20px;
     }
-
     /************  FIN NAV    ****************/
-
-     /************  DESPLEGABLES    ****************/
-
-    #detalle_perfil_avatar{
+    /************  DESPLEGABLES    ****************/
+    #detalle_perfil_avatar {
         top: 70px;
         width: 290px;
-        height: 340px;
+        height: 370px;
     }
-
-
-    #detalle_perfil_avatar>div>p{
+    #detalle_perfil_avatar>div>p {
         margin-bottom: 22px;
         font-size: 16px;
     }
-
     #detalle_perfil_avatar>div>ul {
         font-size: 20px;
     }
-
-    #detalle_carrito{
+    #detalle_carrito {
         font-size: 24px;
         width: 300px;
         height: 280px;
     }
-    
-    #detalle_carrito>table>tbody, tfoot>tr>td {
+    #detalle_carrito>table>tbody,
+    tfoot>tr>td {
         font-size: 20px;
     }
-
+    /******************JUEGO EN EJECUCION********************/
+    .container_juego_ejecucion {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container_juego_ejecucion>.header_juego {
+        height: 100px;
+        background-color: #2e6e63;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .container_juego_ejecucion>.header_juego>section>h1 {
+        font-family: 'Nunito';
+        font-size: 28px;
+        margin-top: 25px;
+        margin-bottom: 0px;
+    }
+    .container_juego_ejecucion>.header_juego>.divisor_vertical_hr {
+        height: 50px !important;
+        margin: 0px !important;
+    }
+    .section_estrellas_likes {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        align-items: center;
+    }
+    /***********************************/
+    .contenedor_en_ejecucion {
+        background-color: var(--color_fondo_header_foot);
+        width: 642px;
+        height: 430px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 26px;
+        margin-top: 21px;
+    }
+    .contenedor_en_ejecucion>.img_tablero_4_en_linea {
+        width: 400px;
+        height: 400px;
+    }
+    .contenedor_en_ejecucion>section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor_en_ejecucion>section>h5 {
+        font-family: 'Nunito';
+        font-size: 20px;
+        font-weight: 700;
+        font-style: normal;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .contenedor_en_ejecucion>section>p {
+        font-family: 'Nunito';
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 11px;
+        margin-top: 5px;
+    }
+    #btn-jugar-en-ejecucion {
+        width: 186px;
+        height: 49px;
+        border-radius: 50px;
+        border-style: none;
+        margin-left: 12px;
+        font-size: 18px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--acento);
+    }
+    /*************************************/
+    .section_tutorial_juego {
+        /*medidas de figma: demasiado, se sale de la pantalla
+    width: 1440px;
+    height: 2959px;*/
+        max-width: 90%;
+        width: 1240px;
+        height: 100%;
+    }
+    .section_tutorial_juego>h2 {
+        font-family: 'Nunito';
+        font-size: 32px;
+        font-weight: 500;
+        width: 100%;
+    }
+    .section_tutorial_juego>p {
+        font-family: 'Nunito';
+        font-size: 16px;
+        width: 100%;
+        height: 88px;
+    }
+    .section_tutorial_juego>div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .section_tutorial_juego>div>article {
+        /* width: 350px;*/
+    }
+    .section_tutorial_juego>div>article>h5 {
+        font-family: 'Nunito';
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .section_tutorial_juego>div>article>p {
+        font-family: 'Nunito';
+        font-size: 16px;
+        font-weight: 500;
+        width: 388px;
+        height: 103px;
+    }
+    .imgs_tutorial_section {
+        /*width: 200px;
+    height: 100px;*/
+    }
+    /******************fin - JUEGO EN EJECUCION********************/
 }

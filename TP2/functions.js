@@ -104,7 +104,27 @@ function loadJuegoEnEjecucion() {
         container_AJAX.innerHTML = '<h1>Error 505</h1>';
     })
 }
+document.getElementById('btn-home').addEventListener('click', loadHome);
 
+function loadHome() {
+
+    fetch('../TP2/home.html').then(
+
+        function(response) {
+            if (response.ok) {
+                response.text().then(
+                    function(h) {
+                        container_AJAX.innerHTML = h;
+                    }
+                )
+            } else {
+                container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
+            }
+        }
+    ).catch(function(response) {
+        container_AJAX.innerHTML = '<h1>Error 505</h1>';
+    })
+}
 botones_nav.forEach(function(btn) {
     btn.addEventListener('click', loadCategoria);
 });
