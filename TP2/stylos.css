@@ -4,6 +4,15 @@
     font-family: 'Nunito';
     color: white;
 }
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+h2 {
+    font-size: 32px;
+    font-weight: normal;
+}
+
 
 :root {
     --color_fondo_header_foot: #0C1935;
@@ -17,6 +26,8 @@
     --color_estado_error: #FF0000;
     --color_estado_ok: #3F6927;
 }
+
+
 
 body {
     background-color: var(--color_fondo_body);
@@ -801,6 +812,7 @@ footer>section>h5 {
         font-size: 20px;
     }
     /******************JUEGO EN EJECUCION********************/
+
     .container_juego_ejecucion {
         max-width: 100%;
         width: 100%;
@@ -809,13 +821,10 @@ footer>section>h5 {
         align-items: center;
     }
     .container_juego_ejecucion>.header_juego {
-        height: 100px;
+        height: 125px;
         background-color: #2e6e63;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
         width: 100%;
+        
     }
     .container_juego_ejecucion>.header_juego>section>h1 {
         font-family: 'Nunito';
@@ -836,8 +845,8 @@ footer>section>h5 {
     /***********************************/
     .contenedor_en_ejecucion {
         background-color: var(--color_fondo_header_foot);
-        width: 642px;
-        height: 430px;
+        width: 1227px;
+        height: 500px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -853,6 +862,7 @@ footer>section>h5 {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-left: 80px;
     }
     .contenedor_en_ejecucion>section>h5 {
         font-family: 'Nunito';
@@ -882,7 +892,52 @@ footer>section>h5 {
         align-items: center;
         justify-content: center;
         background-color: var(--acento);
+        color: var(--color_fondo_body);
+        font-weight: bold;
     }
+
+    /***********************************/
+    .caja1{
+        margin-top: 20px;
+    }
+
+    .caja1, .caja2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 60px;
+    }
+
+    .compartiretc, .likesylogos{
+        display: flex;
+        width: 42%;
+        justify-content: center;
+        margin-right: 80px;
+    }
+
+    .caja1>div>hr {
+        margin-left: 35px;
+        margin-right: 35px;
+        margin-top: 10px;
+        height: 50px;
+    }
+
+    .caja2>div>hr {
+        margin-left: 35px;
+        margin-right: 35px;
+        height: 40px;
+    }
+    
+    .likesylogos>article {
+        width: 141px;
+        height: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .likesylogos>section {
+        width: 182px;
+    }
+
     /*************************************/
     .section_tutorial_juego {
         /*medidas de figma: demasiado, se sale de la pantalla
@@ -891,13 +946,24 @@ footer>section>h5 {
         max-width: 90%;
         width: 1240px;
         height: 100%;
+        display: flex;
+        flex-direction: column;
     }
     .section_tutorial_juego>h2 {
         font-family: 'Nunito';
-        font-size: 32px;
-        font-weight: 500;
         width: 100%;
+        margin-bottom: 3px;
     }
+
+    .tutorial {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section_tutorial_juego>div>article>h2 {
+        margin-top: 6px;
+    }
+
     .section_tutorial_juego>p {
         font-family: 'Nunito';
         font-size: 16px;
@@ -912,11 +978,6 @@ footer>section>h5 {
     }
     .section_tutorial_juego>div>article {
         /* width: 350px;*/
-    }
-    .section_tutorial_juego>div>article>h5 {
-        font-family: 'Nunito';
-        font-size: 20px;
-        font-weight: 700;
     }
     .section_tutorial_juego>div>article>p {
         font-family: 'Nunito';
