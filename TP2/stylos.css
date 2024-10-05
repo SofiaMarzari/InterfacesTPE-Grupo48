@@ -12,7 +12,10 @@ h2 {
     font-size: 32px;
     font-weight: normal;
 }
-
+h4 {
+    font-size: 24px;
+    font-weight: normal;
+}
 
 :root {
     --color_fondo_header_foot: #0C1935;
@@ -25,6 +28,7 @@ h2 {
     --color_estado_warning: #FFB800;
     --color_estado_error: #FF0000;
     --color_estado_ok: #3F6927;
+    --color_comentarios: #2E6E63;
 }
 
 
@@ -976,8 +980,9 @@ footer>section>h5 {
         justify-content: space-between;
         align-items: center;
     }
-    .section_tutorial_juego>div>article {
-        /* width: 350px;*/
+    
+    .recomendados-para-ti {
+        margin-top: 30px;
     }
     .section_tutorial_juego>div>article>p {
         font-family: 'Nunito';
@@ -986,9 +991,57 @@ footer>section>h5 {
         width: 388px;
         height: 103px;
     }
-    .imgs_tutorial_section {
-        /*width: 200px;
-    height: 100px;*/
+   
+
+    /******* SECCION COMENTARIOS ******/
+
+    .container-comentarios{
+        margin-top: 30px;
+        width: 1240px;
+        display: flex;
+        justify-content: space-between;
     }
+
+
+    .comentarios {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color_comentarios);
+        height: 120px;
+    }
+    .comentario-usuario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+   #input-comentario {
+        border: 1px solid black; 
+        background: none; 
+        font-size: 20px; 
+        margin-left: 5px; 
+        width: 600px;
+        border-style: inset;
+        height: 80px;
+   }
+
+    .perfil-comentario {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .perfil-comentario>div {
+        display: flex;
+    }
+    .perfil-comentario>div>h4 {
+        margin-left: 10px;
+    }
+
+
+    .container-comentarios>.comentarios>.comentario_usuario>hr {
+        width: 740px;
+    }
+
     /******************fin - JUEGO EN EJECUCION********************/
 }
