@@ -1007,13 +1007,12 @@ footer>section>h5 {
         width: 60%;
         display: flex;
         flex-direction: column;
-        background-color: var(--color_comentarios);
-        height: 120px;
     }
     .comentario-usuario {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        height: 120px;
     }
 
    #input-comentario {
@@ -1030,6 +1029,7 @@ footer>section>h5 {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 5px;
     }
     .perfil-comentario>div {
         display: flex;
