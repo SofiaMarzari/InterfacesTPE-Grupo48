@@ -995,6 +995,13 @@ footer>section>h5 {
 
     /******* SECCION COMENTARIOS ******/
 
+
+    .titulo-comentarios{
+        width: 1240px;
+        margin-top: 40px;
+    }
+
+
     .container-comentarios{
         margin-top: 30px;
         width: 1240px;
@@ -1008,21 +1015,21 @@ footer>section>h5 {
         display: flex;
         flex-direction: column;
     }
-    .comentario-usuario {
+    .comentario_usuario {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 120px;
+        height: 160px;
+        width: 799px;
     }
 
    #input-comentario {
-        border: 1px solid black; 
+        border: 1px solid rgba(255, 255, 255, 0.295); 
         background: none; 
         font-size: 20px; 
-        margin-left: 5px; 
         width: 600px;
-        border-style: inset;
-        height: 80px;
+        height: 100px;
+        margin-top: 10px;
    }
 
     .perfil-comentario {
@@ -1040,7 +1047,9 @@ footer>section>h5 {
 
 
     .container-comentarios>.comentarios>.comentario_usuario>hr {
-        width: 740px;
+        width: 797px;
+        opacity: 0.1;
+        margin-top: 2px;
     }
 
     /******************fin - JUEGO EN EJECUCION********************/
