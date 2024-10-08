@@ -4,14 +4,17 @@
     font-family: 'Nunito';
     color: white;
 }
+
 h1 {
     font-size: 36px;
     font-weight: bold;
 }
+
 h2 {
     font-size: 32px;
     font-weight: normal;
 }
+
 h4 {
     font-size: 24px;
     font-weight: normal;
@@ -30,8 +33,6 @@ h4 {
     --color_estado_ok: #3F6927;
     --color_comentarios: #2E6E63;
 }
-
-
 
 body {
     background-color: var(--color_fondo_body);
@@ -369,8 +370,8 @@ main {
     background-color: var(--color_fondo_body);
 }
 
-
-.container_login, .container_registro {
+.container_login,
+.container_registro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -418,7 +419,6 @@ main {
     margin-right: 10px;
     margin-left: 10px;
 }
-
 
 .divisor_vertical_hr {
     border: none;
@@ -531,10 +531,13 @@ footer>section>h5 {
     cursor: pointer;
 }
 
+
 /************fin FOOTER****************/
 
 
 /*********** HOME ************/
+
+
 /***** GRID DE HOME ******/
 
 .container-main {
@@ -558,6 +561,7 @@ footer>section>h5 {
     grid-area: carruseles;
     display: flex;
     flex-direction: column;
+    padding-left: 20px;
 }
 
 .publicidad {
@@ -596,6 +600,111 @@ footer>section>h5 {
 
 .carrusel-categorias>h3 {
     padding-top: 20px;
+}
+
+
+/*****************CARRUSELES**************************/
+
+
+/************card***********/
+
+.container_carrusel {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 31px;
+}
+
+.carrusel_cards {
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    align-items: flex-start;
+    gap: 15px;
+    align-self: stretch;
+    overflow-x: scroll;
+    padding-top: 20px;
+}
+
+.carrusel_cards>.card {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+}
+
+.card>img {
+    width: 200px;
+    height: 130px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.rectangulo_inferior_card {
+    height: 50px;
+    width: 100%;
+    background-color: #E3E3E3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.rectangulo_inferior_card>p {
+    font-size: 16px;
+    color: black;
+}
+
+.rectangulo_inferior_card>button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.rectangulo_inferior_card>button>img {
+    width: 50px;
+    height: 50px;
+}
+
+.btn_carrusel_sig {
+    display: none;
+}
+
+.btn_carrusel_ant {
+    display: none;
+}
+
+
+/************etiqueta de la card*********/
+
+.etiqueta_card {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 70px;
+    height: 25px;
+    background-color: #FF6F1C;
+    color: black;
+    font-size: 14px;
+    align-content: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.50));
+}
+
+.contenedor_etiqueta_card {
+    position: absolute;
+    bottom: 127px;
+    left: 140px;
+}
+
+.contenedor_etiqueta_card>img {
+    position: relative;
+    right: -86%;
+    width: 8px;
+    height: 30px;
 }
 
 
@@ -667,7 +776,8 @@ footer>section>h5 {
     /************FIN FOOTER****************/
     /**************HOME**********************/
     .carrusel-categorias {
-        margin-left: 5%;
+        width: 1220px;
+        margin: auto;
     }
     /**************fin - HOME****************/
     /************    FORMULARIO    ****************/
@@ -690,13 +800,11 @@ footer>section>h5 {
     #divisor_lateral>p {
         margin-top: -10px;
     }
-
-    .container_login>.formulario>div>div>input{
+    .container_login>.formulario>div>div>input {
         width: 409px;
         height: 35px;
-        border:solid 1px #78C97A;
+        border: solid 1px #78C97A;
     }
-
     .btn-form {
         width: 490px;
         height: 45px;
@@ -714,51 +822,41 @@ footer>section>h5 {
         align-items: center;
     }
     /************   FIN FORMULARIO    ****************/
-
     /************   REGISTRO    ****************/
-
-    .container_registro{
+    .container_registro {
         width: 700px;
         height: 750px;
     }
-
-    .container_registro>div>.formulario>div>div>input{
+    .container_registro>div>.formulario>div>div>input {
         width: 250px;
         height: 28px;
-        border:solid 1px #78C97A;
+        border: solid 1px #78C97A;
     }
-
-    .container_registro>div>form>.btn-form{
+    .container_registro>div>form>.btn-form {
         width: 100%;
         height: 45px;
         margin-top: 20px;
         margin-bottom: 0px;
     }
-    
-    .container_registro>div>section>div{
+    .container_registro>div>section>div {
         margin-bottom: 180px;
-
     }
-    .container_registro>div>section>div>button{
+    .container_registro>div>section>div>button {
         width: 250px;
         height: 35px;
         margin-bottom: 37px;
     }
-
-    .container_registro>div>article{
+    .container_registro>div>article {
         margin-top: 40px;
         margin-left: 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .container_registro>div>article>p{
+    .container_registro>div>article>p {
         margin-top: 5px;
         margin-bottom: 5px;
     }
-
-
-
     /************   NAV    ****************/
     nav {
         width: 287px;
@@ -816,7 +914,6 @@ footer>section>h5 {
         font-size: 20px;
     }
     /******************JUEGO EN EJECUCION********************/
-
     .container_juego_ejecucion {
         max-width: 100%;
         width: 100%;
@@ -828,7 +925,6 @@ footer>section>h5 {
         height: 125px;
         background-color: #2e6e63;
         width: 100%;
-        
     }
     .container_juego_ejecucion>.header_juego>section>h1 {
         font-family: 'Nunito';
@@ -899,39 +995,35 @@ footer>section>h5 {
         color: var(--color_fondo_body);
         font-weight: bold;
     }
-
     /***********************************/
-    .caja1{
+    .caja1 {
         margin-top: 20px;
     }
-
-    .caja1, .caja2{
+    .caja1,
+    .caja2 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         height: 60px;
     }
-
-    .compartiretc, .likesylogos{
+    .compartiretc,
+    .likesylogos {
         display: flex;
         width: 42%;
         justify-content: center;
         margin-right: 80px;
     }
-
     .caja1>div>hr {
         margin-left: 35px;
         margin-right: 35px;
         margin-top: 10px;
         height: 50px;
     }
-
     .caja2>div>hr {
         margin-left: 35px;
         margin-right: 35px;
         height: 40px;
     }
-    
     .likesylogos>article {
         width: 141px;
         height: 20px;
@@ -941,7 +1033,6 @@ footer>section>h5 {
     .likesylogos>section {
         width: 182px;
     }
-
     /*************************************/
     .section_tutorial_juego {
         /*medidas de figma: demasiado, se sale de la pantalla
@@ -958,16 +1049,13 @@ footer>section>h5 {
         width: 100%;
         margin-bottom: 3px;
     }
-
     .tutorial {
         display: flex;
         flex-direction: column;
     }
-
     .section_tutorial_juego>div>article>h2 {
         margin-top: 6px;
     }
-
     .section_tutorial_juego>p {
         font-family: 'Nunito';
         font-size: 16px;
@@ -980,7 +1068,6 @@ footer>section>h5 {
         justify-content: space-between;
         align-items: center;
     }
-    
     .recomendados-para-ti {
         margin-top: 30px;
     }
@@ -991,25 +1078,17 @@ footer>section>h5 {
         width: 388px;
         height: 103px;
     }
-   
-
     /******* SECCION COMENTARIOS ******/
-
-
-    .titulo-comentarios{
+    .titulo-comentarios {
         width: 1240px;
         margin-top: 40px;
     }
-
-
-    .container-comentarios{
+    .container-comentarios {
         margin-top: 30px;
         width: 1240px;
         display: flex;
         justify-content: space-between;
     }
-
-
     .comentarios {
         width: 60%;
         display: flex;
@@ -1022,16 +1101,14 @@ footer>section>h5 {
         height: 160px;
         width: 799px;
     }
-
-   #input-comentario {
-        border: 1px solid rgba(255, 255, 255, 0.295); 
-        background: none; 
-        font-size: 20px; 
+    #input-comentario {
+        border: 1px solid rgba(255, 255, 255, 0.295);
+        background: none;
+        font-size: 20px;
         width: 600px;
         height: 100px;
         margin-top: 10px;
-   }
-
+    }
     .perfil-comentario {
         display: flex;
         justify-content: space-between;
@@ -1044,13 +1121,111 @@ footer>section>h5 {
     .perfil-comentario>div>h4 {
         margin-left: 10px;
     }
-
-
     .container-comentarios>.comentarios>.comentario_usuario>hr {
         width: 797px;
         opacity: 0.1;
         margin-top: 2px;
     }
-
-    /******************fin - JUEGO EN EJECUCION********************/
+    /******************fin - JUEGO EN EJECUCION*********************/
+    /***************************************************************/
+    /********************CARRUSELES*********************************/
+    /********card*******/
+    /*div.translate {
+        height: 100px;
+    }*/
+    .container_carrusel {
+        width: 1220px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 31px;
+        position: relative;
+        padding-top: 20px;
+    }
+    .btn_carrusel_ant {
+        z-index: 4;
+        height: 235px;
+        width: 71px;
+        position: absolute;
+        display: block;
+        background-color: #0C193599;
+        color: black;
+        border: none;
+        cursor: pointer;
+    }
+    .btn_carrusel_sig {
+        z-index: 5;
+        height: 235px;
+        width: 71px;
+        display: block;
+        background-color: #0C193599;
+        color: black;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+    }
+    .carrusel_cards {
+        display: flex;
+        flex-direction: row;
+        z-index: 2;
+        align-items: flex-start;
+        gap: 15px;
+        align-self: stretch;
+        overflow-x: unset;
+        padding-top: 0px;
+    }
+    .carrusel_cards>.card {
+        text-align: center;
+        width: 262px !important;
+        height: 235px;
+        margin-left: 5px;
+        background-color: #E3E3E3;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        position: relative;
+        align-items: end;
+    }
+    .card>img {
+        width: 100%;
+        height: 175px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .rectangulo_inferior_card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 60px;
+        align-items: center;
+        border-radius: 10px;
+        width: 100%;
+    }
+    .rectangulo_inferior_card>p {
+        color: #282828;
+        font-family: Nunito;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 0px;
+        margin-top: 15px;
+    }
+    .rectangulo_inferior_card>button {
+        margin-left: 50px;
+    }
+    /**********etiqueta de la card********/
+    .etiqueta_card {
+        width: 120px;
+        height: 37px;
+        font-size: 20px;
+        left: 8%;
+    }
+    .contenedor_etiqueta_card {
+        bottom: 174px;
+        left: 54%;
+    }
+    .contenedor_etiqueta_card>img {
+        right: -54%;
+    }
 }
