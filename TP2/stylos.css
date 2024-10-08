@@ -544,11 +544,16 @@ footer>section>h5 {
     max-width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto 300px;
+    grid-template-rows: auto auto auto 300px;
     color: white;
-    grid-template-areas: "topjuegos" "carruseles" "publicidad";
+    grid-template-areas: "topjuegos" "hr" "carruseles" "publicidad";
 }
-
+.hr_home{
+    grid-area: hr;
+    background: rgba(255, 255, 255, 0.30);
+    margin-top: 52px;
+    margin-bottom: 36px;
+}
 .mas-jugados {
     grid-area: topjuegos;
     margin-top: 10px;
@@ -789,6 +794,7 @@ footer>section>h5 {
     .carrusel-categorias {
         width: 1220px;
         margin: auto;
+        margin-bottom: 90px;
     }
     /**************fin - HOME****************/
     /************    FORMULARIO    ****************/
@@ -1139,17 +1145,6 @@ footer>section>h5 {
     }
     /******************fin - JUEGO EN EJECUCION*********************/
     /***************************************************************/
-    /********************CARDS DESTACADAS*********************************/
-    .mas-jugados{
-        width: 1318px;
-        height: 467px;
-        margin: auto;
-        margin-top: 15px;
-    }
-    .div_cards_mas-jugados{
-        flex-direction: row;
-    }
-    /***************************************************************/
     /********************CARRUSELES*********************************/
     /********card*******/
     /*div.translate {
@@ -1251,5 +1246,36 @@ footer>section>h5 {
     }
     .contenedor_etiqueta_card>img {
         right: -54%;
+    }
+    /***************************************************************/
+    /********************CARDS DESTACADAS*********************************/
+    .mas-jugados{
+        width: 1318px;
+        height: 467px;
+        margin: auto;
+        margin-top: 15px;
+    }
+    .div_cards_mas-jugados{
+        flex-direction: row;
+        width: 1219px;
+        height: 332px;
+        justify-content: space-between;
+        margin-top: 45px;
+    }
+    .div_cards_mas-jugados>.card{
+        width: 370px;
+        height: 331.87px;
+    }
+    .div_cards_mas-jugados>.card>img{
+        width: 100%;
+        height: 234.261px;
+    }
+    .div_cards_mas-jugados>.card>.rectangulo_inferior_card>button{
+        width: 85px;
+        height: 85px;
+    }
+    .div_cards_mas-jugados>.card>.rectangulo_inferior_card>button>img{
+        width: 85px;
+        height: 85px;
     }
 }
