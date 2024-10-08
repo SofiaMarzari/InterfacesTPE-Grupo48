@@ -74,7 +74,7 @@ footer {
 .layout {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 9% auto 19%;
+    grid-template-rows: auto auto 19%;
     grid-template-areas: "header" "main" "footer";
 }
 
@@ -544,7 +544,7 @@ footer>section>h5 {
     max-width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 40% auto 300px;
+    grid-template-rows: auto auto 300px;
     color: white;
     grid-template-areas: "topjuegos" "carruseles" "publicidad";
 }
@@ -555,8 +555,15 @@ footer>section>h5 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 15px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, rgba(55, 61, 121, 0.30) 51.5%, rgba(0, 0, 0, 0.00) 100%);
+    mix-blend-mode: plus-lighter;
 }
-
+.div_cards_mas-jugados{
+    display: flex;
+    flex-direction: column;
+}
 .carrusel-categorias {
     grid-area: carruseles;
     display: flex;
@@ -711,8 +718,12 @@ footer>section>h5 {
 /* solo para pantallas superiores a 1024px */
 
 @media only screen and (min-width: 1024px) {
+    .layout{
+        grid-template-rows: auto;
+    }
     .container-main {
         width: 100%;
+        grid-template-rows: auto;
     }
     /************    HEADER    ****************/
     .img-hamburguesa {
@@ -1133,6 +1144,10 @@ footer>section>h5 {
         width: 1318px;
         height: 467px;
         margin: auto;
+        margin-top: 15px;
+    }
+    .div_cards_mas-jugados{
+        flex-direction: row;
     }
     /***************************************************************/
     /********************CARRUSELES*********************************/
