@@ -161,136 +161,266 @@ function loadCategoria(event) {
 /*********************************************************/
 let categorias =
 [
-{
-"id": 1,
-"nombre": "Accion",
-"cards": [
-{
-"id": 1,
-"gratis": false,
-"precio": 2000,
-"descuento": 0,
-"nombre": "Pockemon",
-"obtenido": false
-},
-{
-"id": 2,
-"gratis": true,
-"precio": 0,
-"descuento": 0,
-"nombre": "Ninja Hands",
-"obtenido": false
-},
-{
-"id": 3,
-"gratis": false,
-"precio": 3800,
-"descuento": 0,
-"nombre": "Pixel Warfare",
-"obtenido": true
-},
-{
-"id": 4,
-"gratis": true,
-"precio": 0,
-"descuento": 0,
-"nombre": "Ninja Hands",
-"obtenido": false
-},
-{
-"id": 5,
-"gratis": true,
-"precio": 0,
-"descuento": 0,
-"nombre": "Ninja Hands",
-"obtenido": false
-},
-{
-"id": 6,
-"gratis": true,
-"precio": 0,
-"descuento": 0,
-"nombre": "Ninja Hands",
-"obtenido": false
-},
-{
-"id": 7,
-"gratis": true,
-"precio": 0,
-"descuento": 0,
-"nombre": "Ninja Hands",
-"obtenido": false
-},
-{
-"id": 8,
-"gratis": true,
-"precio": 0,
-"descuento": 0,
-"nombre": "Ninja Hands",
-"obtenido": false
-},
-{
-"id": 9,
-"gratis": true,
-"precio": 0,
-"descuento": 0,
-"nombre": "Ninja Hands",
-"obtenido": false
-},
-{
-"id": 10,
-"gratis": true,
-"precio": 0,
-"descuento": 0,
-"nombre": "Ninja Hands",
-"obtenido": false
-}
-]
-},
-{
-"id": 1,
-"nombre": "Aventuras",
-"cards": [
-{
-"id": 1,
-"gratis": false,
-"precio": 2000,
-"descuento": 0,
-"nombre": "Pockemon",
-"obtenido": false
-},
-{
-"id": 2,
-"gratis": true,
-"precio": 0,
-"descuento": 0,
-"nombre": "Ninja Hands",
-"obtenido": false
-}
-]
-},
-{
-"id": 1,
-"nombre": "2 Jugadores",
-"cards": [
-{
-"id": 1,
-"gratis": false,
-"precio": 2000,
-"descuento": 0,
-"nombre": "Pockemon",
-"obtenido": false
-},
-{
-"id": 2,
-"gratis": true,
-"precio": 0,
-"descuento": 0,
-"nombre": "Ninja Hands",
-"obtenido": false
-}
-]
-}
+    {
+            "id": 1,
+            "nombre": "Accion",
+            "cards": [
+                {
+                    "id": 1,
+                    "gratis": false,
+                    "precio": 2500,
+                    "descuento": 0,
+                    "nombre": "10 Minutes Terror",
+                    "obtenido": false
+                },
+                {
+                    "id": 2,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Chiken Dense",
+                    "obtenido": false
+                },
+                {
+                    "id": 3,
+                    "gratis": false,
+                    "precio": 2500,
+                    "descuento": 20,
+                    "nombre": "Cursed Treasty 3",
+                    "obtenido": true
+                },
+                {
+                    "id": 4,
+                    "gratis": false,
+                    "precio": 1000,
+                    "descuento": 0,
+                    "nombre": "Ninja Hands",
+                    "obtenido": true
+                },
+                {
+                    "id": 5,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Shorties Killer",
+                    "obtenido": false
+                },
+                {
+                    "id": 6,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Super Spin",
+                    "obtenido": false
+                },
+                {
+                    "id": 7,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Castle Wars",
+                    "obtenido": false
+                },
+                {
+                    "id": 8,
+                    "gratis": false,
+                    "precio": 10000,
+                    "descuento": 50,
+                    "nombre": "Build & Crush",
+                    "obtenido": false
+                },
+                {
+                    "id": 9,
+                    "gratis": false,
+                    "precio": 2000,
+                    "descuento": 0,
+                    "nombre": "Archer Master",
+                    "obtenido": true
+                },
+                {
+                    "id": 10,
+                    "gratis": false,
+                    "precio": 1900,
+                    "descuento": 0,
+                    "nombre": "Bloc Ops",
+                    "obtenido": false
+                }
+                ,
+                {
+                    "id": 11,
+                    "gratis": false,
+                    "precio": 99,
+                    "descuento": 0,
+                    "nombre": "Shadow Ninja",
+                    "obtenido": false
+                },
+                {
+                    "id": 12,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Ninja Parkour",
+                    "obtenido": false
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "nombre": "aventura",
+            "cards": [
+                {
+                    "id": 1,
+                    "gratis": false,
+                    "precio": 2000,
+                    "descuento": 0,
+                    "nombre": "Pikel Warfare",
+                    "obtenido": true
+                },
+                {
+                    "id": 2,
+                    "gratis": true,
+                    "precio": 4200,
+                    "descuento": 0,
+                    "nombre": "Sausage Dog",
+                    "obtenido": false
+                },
+                {
+                    "id": 3,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Monster Mash",
+                    "obtenido": false
+                },
+                {
+                    "id": 4,
+                    "gratis": false,
+                    "precio": 500,
+                    "descuento": 0,
+                    "nombre": "Extraordinary",
+                    "obtenido": false
+                },
+                {
+                    "id": 5,
+                    "gratis": true,
+                    "precio": 720,
+                    "descuento": 0,
+                    "nombre": "Duck Life",
+                    "obtenido": false
+                }
+                ,
+                {
+                    "id": 6,
+                    "gratis": false,
+                    "precio": 720,
+                    "descuento": 0,
+                    "nombre": "Lineaje II",
+                    "obtenido": true
+                },
+                {
+                    "id": 7,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Metro Escape",
+                    "obtenido": false
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "nombre": "2 Jugadores",
+            "cards": [
+                {
+                    "id": 1,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Futbolito",
+                    "obtenido": false
+                },
+                {
+                    "id": 2,
+                    "gratis": false,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "City Racing",
+                    "obtenido": true
+                },
+                {
+                    "id": 3,
+                    "gratis": false,
+                    "precio": 5000,
+                    "descuento": 20,
+                    "nombre": "Basketball Seen",
+                    "obtenido": false
+                },
+                {
+                    "id": 4,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Boxing v2",
+                    "obtenido": false
+                },
+                {
+                    "id": 5,
+                    "gratis": false,
+                    "precio": 3700,
+                    "descuento": 20,
+                    "nombre": "Drunken Box",
+                    "obtenido": false
+                },
+                {
+                    "id": 6,
+                    "gratis": false,
+                    "precio": 2500,
+                    "descuento": 25,
+                    "nombre": "Ajedrez",
+                    "obtenido": false
+                },
+                {
+                    "id": 7,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Sky Balls",
+                    "obtenido": false
+                },
+                {
+                    "id": 8,
+                    "gratis": false,
+                    "precio": 1010,
+                    "descuento": 25,
+                    "nombre": "Pill Soccer",
+                    "obtenido": false
+                },
+                {
+                    "id": 9,
+                    "gratis": false,
+                    "precio": 5300,
+                    "descuento": 0,
+                    "nombre": "Tank Wars",
+                    "obtenido": false
+                },
+                {
+                    "id": 10,
+                    "gratis": false,
+                    "precio": 5300,
+                    "descuento": 0,
+                    "nombre": "Mini Battles",
+                    "obtenido": true
+                },
+                {
+                    "id": 11,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Crash Cars",
+                    "obtenido": false
+                }
+        ]
+    }
 ];
 function cargar_cards_crear_carruseles() {
     let section_carrusel = document.getElementById('section_carrusel');
@@ -299,7 +429,7 @@ function cargar_cards_crear_carruseles() {
         /***************************************************************************************************/
         /*Titulo categoria carrusel*/
         let h3 = document.createElement('h3');
-        let nom_categoria = document.createTextNode(cat.nombre);
+        let nom_categoria = document.createTextNode(cat.nombre.charAt(0).toUpperCase() + cat.nombre.slice(1));
         h3.appendChild(nom_categoria);
         /***************************************************************************************************/
 
@@ -360,7 +490,7 @@ function cargar_cards_crear_carruseles() {
             } //sino no es necesario que se cree...
             /*imagen*/
             let img = document.createElement('img');
-            img.setAttribute('src', 'uploads/cards/card_img_carrusel_' + card.id + '.png');
+            img.setAttribute('src', 'uploads/cards/card_img_carrusel_' + cat.nombre + '_' + card.id + '.png');
             img.setAttribute('data', 'card_img');
 
             article_card.appendChild(img); //lo agrego a la card
