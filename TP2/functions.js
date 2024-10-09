@@ -142,6 +142,8 @@ function loadHome() {
             document.querySelector("header").classList.remove("header-blur");
             document.querySelector("footer").classList.remove("footer-blur");
             }, 5000)
+            
+            // Comentario de prueba para pushear y ver si se actualiza bien todo
     ).catch(function(response) {
         container_AJAX.innerHTML = '<h1>Error 505</h1>';
     })
