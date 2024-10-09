@@ -163,7 +163,7 @@ let categorias =
 [
     {
             "id": 1,
-            "nombre": "Accion",
+            "nombre": "accion",
             "cards": [
                 {
                     "id": 1,
@@ -442,7 +442,7 @@ function cargar_cards_crear_carruseles() {
         let carrusel = document.createElement('div');
         carrusel.classList.add("carrusel_cards");
         carrusel.classList.add("translate");
-        carrusel.setAttribute('data-clicks', '0');
+        carrusel.setAttribute('data-clicks', '1');
         carrusel.setAttribute('data-valpx', '0');
 
         /*Botones del carrusel*/
@@ -534,6 +534,7 @@ function cargar_cards_crear_carruseles() {
     });
 }
 
+let llego_a_la_ultima = false;
 function translateFunctionSig() {
     let padre = this.parentElement;
     let btn_ant = padre.children[0];
@@ -543,20 +544,22 @@ function translateFunctionSig() {
     let data_cont_atributo = div_carrusel.getAttribute('data-clicks');
     let translate_px = parseInt(div_carrusel.getAttribute('data-valpx'));
     let contClicks = data_cont_atributo;
-    if (contClicks == 0) {
+    let cantidad_cards_por_ver = (div_carrusel.children.length) - 4;
+    let cantidad_de_clicks = Math.ceil(cantidad_cards_por_ver/1.5);
+    let porcentaje = 100/cantidad_cards_por_ver;
+    if (contClicks == 1) {
         btn_ant.classList.remove("no-visible");
         btn_ant.classList.add("visible");
     }
-    let cantidad_cards_por_ver = (div_carrusel.children.length) - 4;
-    let cantidad_de_clicks = cantidad_cards_por_ver / 1.5;
     if (contClicks <= cantidad_de_clicks) {
         if (contClicks == cantidad_de_clicks) { //si es el ultimo click para ver la ultima card, no debe deslizarse "una card y media", sino solo "media"
-            translate_px = translate_px + (-106);
+            translate_px = translate_px + (-5.0);
+            llego_a_la_ultima=true;
         } else {
-            translate_px = translate_px + (-371);
+            translate_px = translate_px + (-porcentaje);
         }
         //animacion, se desliza el carrusel..NEXT->
-        div_carrusel.style.transform = "translateX(" + translate_px + "px)";
+        div_carrusel.style.transform = "translateX(" + translate_px + "%)";
         div_carrusel.style.transition = " all 1s"
         contClicks++;
     }
@@ -569,49 +572,43 @@ function translateFunctionSig() {
     div_carrusel.setAttribute('data-valpx', translate_px);
 }
 
-let llego_a_la_ultima = false;
-
 function translateFunctionAnt() {
     let padre = this.parentElement;
     let btn_ant = padre.children[0];
     let btn_sig = padre.children[1];
     let div_carrusel = padre.children[2];
-
     let data_cont_atributo = div_carrusel.getAttribute('data-clicks');
-    if (data_cont_atributo > 0) {
+    if (data_cont_atributo > 1) {
         let translate_px = parseInt(div_carrusel.getAttribute('data-valpx'));
         let contClicks = data_cont_atributo;
-
         let cantidad_cards_por_ver = (div_carrusel.children.length) - 4;
-        let cantidad_de_clicks = cantidad_cards_por_ver / 1.5;
-        if (contClicks > cantidad_de_clicks) { //si ESTOY viendo la ultima card, solo retrocedo "media card"...
-            translate_px = translate_px + 106;
-            llego_a_la_ultima = true;
-            btn_sig.classList.remove("no-visible");
-            btn_sig.classList.add("visible");
+        let cantidad_de_clicks = Math.ceil(cantidad_cards_por_ver / 1.5);
+        let porcentaje = 100/cantidad_cards_por_ver;
+
+        btn_sig.classList.remove("no-visible");
+        btn_sig.classList.add("visible");
+        if (contClicks == 2) { 
+            translate_px = 0;
+            btn_ant.classList.remove("visible");
+            btn_ant.classList.add("no-visible");
         } else {
             if ((contClicks - 1) == 0) { //estoy A 1 CLICK del principio del carrusel y no podre retroceder mas..
-                /*******************esta parte queda comentada porque se me mezclan
-                las cuentas si a mitad de carrusel avanzo y retrocedo otra vez********************** */
-                /* if(llego_a_la_ultima===true){//si llegue a ver la ultima card, el ultimo calculo del siguiente click fue de 100px y no de 371 ("una card y media")
-                    translate_px=translate_px+106;
-                    llego_a_la_ultima=false;
-                }else{*/ //si no llegue al final del carrusel no se hizo esa suma final de 100 px en vez de 371..
-                translate_px = translate_px + 371;
-                /* }*/
-                //como estoy a 1 click del final entonces oculto el boton "ant" para no retroceder más...
+                translate_px = translate_px + porcentaje;
+                //como estoy a 1 click del principio entonces oculto el boton "ant" para no retroceder mas...
                 btn_ant.classList.remove("visible");
                 btn_ant.classList.add("no-visible");
             } else {
-                translate_px = translate_px + 371;
+                if(llego_a_la_ultima===true){
+                    translate_px=translate_px+5.0;
+                    llego_a_la_ultima=false;
+                }else{
+                    translate_px=translate_px+porcentaje;
+                }
             }
         }
-
-
         //animacion, se desliza el carrusel..<-ANT
-        this.parentElement.children[2].style.transform = "translateX(" + translate_px + "px)";
+        this.parentElement.children[2].style.transform = "translateX(" + translate_px + "%)";
         this.parentElement.children[2].style.transition = " all 1s"
-
         //setteo valores a los atributos para que queden actualizados para el siguiente click(sig o ant)
         div_carrusel.setAttribute('data-clicks', contClicks - 1);
         div_carrusel.setAttribute('data-valpx', translate_px);
