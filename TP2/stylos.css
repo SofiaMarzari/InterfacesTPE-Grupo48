@@ -553,8 +553,14 @@ footer>section>h5 {
     background: rgba(255, 255, 255, 0.30);
     margin-top: 52px;
     margin-bottom: 36px;
+    border-bottom-width: 0px;
+    border-bottom-style: solid;
 }
+/***************************************************************/
+/********************CARDS DESTACADAS*********************************/
 .mas-jugados {
+    margin: auto;
+    width: 95%;
     grid-area: topjuegos;
     margin-top: 10px;
     display: flex;
@@ -563,12 +569,25 @@ footer>section>h5 {
     padding-top: 15px;
     border-radius: 5px;
     background: linear-gradient(180deg, rgba(55, 61, 121, 0.30) 51.5%, rgba(0, 0, 0, 0.00) 100%);
-    mix-blend-mode: plus-lighter;
 }
 .div_cards_mas-jugados{
     display: flex;
     flex-direction: column;
 }
+.div_cards_mas-jugados>.card{
+    position: relative;
+    margin: 10px 0px 10px 0px;
+    background-color: #E3E3E3;
+    border-radius: 10px;
+}
+.img_medallas{
+    height: 40px !important;
+    width: 40px !important;
+    position: absolute;
+    top: -15px;
+}
+/***************************************************************/
+/********************fin - CARDS DESTACADAS*********************************/
 .carrusel-categorias {
     grid-area: carruseles;
     display: flex;
@@ -583,7 +602,6 @@ footer>section>h5 {
     justify-content: center;
     margin-left: 5%;
 }
-
 
 /* MOBILE FIRST */
 
@@ -699,13 +717,17 @@ footer>section>h5 {
     text-align: center;
     width: 70px;
     height: 25px;
-    background-color: #FF6F1C;
     color: black;
     font-size: 14px;
     align-content: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.50));
 }
-
+.etiqueta_card_pago{
+    background-color: #FF6F1C;
+}
+.etiqueta_card_agregado{
+    background-color: #4CB04F;
+}
 .contenedor_etiqueta_card {
     position: absolute;
     bottom: 127px;
@@ -1252,7 +1274,6 @@ footer>section>h5 {
     .mas-jugados{
         width: 1318px;
         height: 467px;
-        margin: auto;
         margin-top: 15px;
     }
     .div_cards_mas-jugados{
@@ -1266,16 +1287,27 @@ footer>section>h5 {
         width: 370px;
         height: 331.87px;
     }
-    .div_cards_mas-jugados>.card>img{
+    .div_cards_mas-jugados>.card>.img_juego_destacado{
         width: 100%;
         height: 234.261px;
+    }
+    .div_cards_mas-jugados>.card>.rectangulo_inferior_card{
+        height: 100%;
     }
     .div_cards_mas-jugados>.card>.rectangulo_inferior_card>button{
         width: 85px;
         height: 85px;
     }
+    .div_cards_mas-jugados>.card>.rectangulo_inferior_card>p{
+        font-size: 32px;
+    }
     .div_cards_mas-jugados>.card>.rectangulo_inferior_card>button>img{
         width: 85px;
         height: 85px;
+    }
+    .img_medallas{
+        height: 60px !important;
+        width: 60px !important;
+        top: -25px;
     }
 }

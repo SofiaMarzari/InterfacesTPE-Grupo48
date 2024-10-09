@@ -159,121 +159,139 @@ function loadCategoria(event) {
 }
 /**********************fin - AJAX NAV***************************/
 /*********************************************************/
-let categorias = [{
-        "id": 1,
-        "nombre": "Accion",
-        "cards": [{
-                "id": 1,
-                "gratis": false,
-                "precio": 2000,
-                "descuento": 0,
-                "nombre": "Pockemon"
-            },
-            {
-                "id": 2,
-                "gratis": true,
-                "precio": 0,
-                "descuento": 0,
-                "nombre": "Ninja Hands"
-            },
-            {
-                "id": 3,
-                "gratis": true,
-                "precio": 0,
-                "descuento": 0,
-                "nombre": "Pixel Warfare"
-            },
-            {
-                "id": 4,
-                "gratis": true,
-                "precio": 0,
-                "descuento": 0,
-                "nombre": "Ninja Hands"
-            },
-            {
-                "id": 5,
-                "gratis": true,
-                "precio": 0,
-                "descuento": 0,
-                "nombre": "Ninja Hands"
-            },
-            {
-                "id": 6,
-                "gratis": true,
-                "precio": 0,
-                "descuento": 0,
-                "nombre": "Ninja Hands"
-            },
-            {
-                "id": 7,
-                "gratis": true,
-                "precio": 0,
-                "descuento": 0,
-                "nombre": "Ninja Hands"
-            },
-            {
-                "id": 8,
-                "gratis": true,
-                "precio": 0,
-                "descuento": 0,
-                "nombre": "Ninja Hands"
-            },
-            {
-                "id": 9,
-                "gratis": true,
-                "precio": 0,
-                "descuento": 0,
-                "nombre": "Ninja Hands"
-            },
-            {
-                "id": 10,
-                "gratis": true,
-                "precio": 0,
-                "descuento": 0,
-                "nombre": "Ninja Hands"
-            }
-        ]
-    },
-    {
-        "id": 1,
-        "nombre": "Aventuras",
-        "cards": [{
-                "id": 1,
-                "gratis": false,
-                "precio": 2000,
-                "descuento": 0,
-                "nombre": "Pockemon"
-            },
-            {
-                "id": 2,
-                "gratis": true,
-                "precio": 0,
-                "descuento": 0,
-                "nombre": "Ninja Hands"
-            }
-        ]
-    },
-    {
-        "id": 1,
-        "nombre": "2 Jugadores",
-        "cards": [{
-                "id": 1,
-                "gratis": false,
-                "precio": 2000,
-                "descuento": 0,
-                "nombre": "Pockemon"
-            },
-            {
-                "id": 2,
-                "gratis": true,
-                "precio": 0,
-                "descuento": 0,
-                "nombre": "Ninja Hands"
-            }
-        ]
-    }
+let categorias =
+[
+{
+"id": 1,
+"nombre": "Accion",
+"cards": [
+{
+"id": 1,
+"gratis": false,
+"precio": 2000,
+"descuento": 0,
+"nombre": "Pockemon",
+"obtenido": false
+},
+{
+"id": 2,
+"gratis": true,
+"precio": 0,
+"descuento": 0,
+"nombre": "Ninja Hands",
+"obtenido": false
+},
+{
+"id": 3,
+"gratis": false,
+"precio": 3800,
+"descuento": 0,
+"nombre": "Pixel Warfare",
+"obtenido": true
+},
+{
+"id": 4,
+"gratis": true,
+"precio": 0,
+"descuento": 0,
+"nombre": "Ninja Hands",
+"obtenido": false
+},
+{
+"id": 5,
+"gratis": true,
+"precio": 0,
+"descuento": 0,
+"nombre": "Ninja Hands",
+"obtenido": false
+},
+{
+"id": 6,
+"gratis": true,
+"precio": 0,
+"descuento": 0,
+"nombre": "Ninja Hands",
+"obtenido": false
+},
+{
+"id": 7,
+"gratis": true,
+"precio": 0,
+"descuento": 0,
+"nombre": "Ninja Hands",
+"obtenido": false
+},
+{
+"id": 8,
+"gratis": true,
+"precio": 0,
+"descuento": 0,
+"nombre": "Ninja Hands",
+"obtenido": false
+},
+{
+"id": 9,
+"gratis": true,
+"precio": 0,
+"descuento": 0,
+"nombre": "Ninja Hands",
+"obtenido": false
+},
+{
+"id": 10,
+"gratis": true,
+"precio": 0,
+"descuento": 0,
+"nombre": "Ninja Hands",
+"obtenido": false
+}
+]
+},
+{
+"id": 1,
+"nombre": "Aventuras",
+"cards": [
+{
+"id": 1,
+"gratis": false,
+"precio": 2000,
+"descuento": 0,
+"nombre": "Pockemon",
+"obtenido": false
+},
+{
+"id": 2,
+"gratis": true,
+"precio": 0,
+"descuento": 0,
+"nombre": "Ninja Hands",
+"obtenido": false
+}
+]
+},
+{
+"id": 1,
+"nombre": "2 Jugadores",
+"cards": [
+{
+"id": 1,
+"gratis": false,
+"precio": 2000,
+"descuento": 0,
+"nombre": "Pockemon",
+"obtenido": false
+},
+{
+"id": 2,
+"gratis": true,
+"precio": 0,
+"descuento": 0,
+"nombre": "Ninja Hands",
+"obtenido": false
+}
+]
+}
 ];
-
 function cargar_cards_crear_carruseles() {
     let section_carrusel = document.getElementById('section_carrusel');
 
@@ -322,22 +340,20 @@ function cargar_cards_crear_carruseles() {
 
                 let div = document.createElement('div');
                 div.classList.add("etiqueta_card");
+                let text_precio_o_agregado="";
 
-                let text_precio_o_agregado = document.createTextNode(card.precio);
+                let triangulo_img = document.createElement('img');
+                if(card.obtenido){
+                    text_precio_o_agregado = document.createTextNode("Obtenido !");
+                    div.classList.add("etiqueta_card_agregado");
+                    triangulo_img.setAttribute('src', 'uploads/triangulo_add.png');
+                }else{
+                    text_precio_o_agregado = document.createTextNode(card.precio);
+                    div.classList.add("etiqueta_card_pago");
+                    triangulo_img.setAttribute('src', 'uploads/triangulo.png');
+                }
                 div.appendChild(text_precio_o_agregado);
                 article_etiqueta.appendChild(div);
-
-                /*let svg = document.createElement('svg');
-                svg.setAttribute('viewBox', '0 0 10 44');
-                svg.setAttribute('fill', 'none');
-                svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-                let svg_path = document.createElement('path');
-                svg_path.setAttribute('d', 'M-1.33514e-05 0H9.12024L-1.33514e-05 43.3137V0Z');
-                svg_path.setAttribute('fill', '#CE5713');
-                svg.appendChild(svg_path);
-                article_etiqueta.appendChild(svg);*/
-                let triangulo_img = document.createElement('img');
-                triangulo_img.setAttribute('src', 'uploads/triangulo.png');
                 article_etiqueta.appendChild(triangulo_img);
 
                 article_card.appendChild(article_etiqueta); //lo agrego a la card
