@@ -408,8 +408,8 @@ main {
     padding: 5px 17px 5px 17px;
     border: none;
     outline: none;
-    color:black;
     cursor: pointer;
+    font-weight: bold;
     transition: .5s;
     overflow: hidden;
     margin-bottom: 20px;
@@ -430,7 +430,7 @@ main {
 
 .btn-animacion2 span:nth-child(1){
     width: 100%;
-    height: 1px;
+    height: 2px;
     top: 0;
     left: -100%;
 }
@@ -438,21 +438,22 @@ main {
 
 .btn-animacion2 span:nth-child(2){
     width: 100%;
-    height: 1px;
+    height: 2px;
     bottom: 0;
     right: -100%;
 }
 
 .btn-animacion2 span:nth-child(3){
-    width: 1px;
+    width: 2px;
     height: 100%;
     bottom: -100%;
     left: 0;
+    
 }
 
 
 .btn-animacion2 span:nth-child(4){
-    width: 1px;
+    width: 2px;
     height: 100%;
     top: -100%;
     right: 0;
@@ -805,6 +806,72 @@ footer>section>h5 {
 }
 
 
+/******** SPINNER DE CARGA ********/
+.container{
+    position: fixed;
+    z-index: 100;
+    top: 40%;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.container--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.container-main-blur{
+    filter: blur(20px);
+}
+.header-blur{
+    filter: blur(20px);
+}
+.footer-blur{
+    filter: blur(20px);
+}
+
+
+.container .loader{
+    width: 100px;
+    height: 100px;
+    border: solid 10px #2E6E63;
+    border-top: solid 10px #3FE03F;
+    border-radius: 50%;
+    animation: loader .8s linear infinite;
+
+}
+
+@keyframes loader {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.container .message{
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: message 1s alternate infinite ease-in-out;
+}
+
+
+@keyframes message {
+    0%{
+        opacity: .2;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
 /* solo para pantallas superiores a 1024px */
 
 @media only screen and (min-width: 1024px) {
@@ -816,6 +883,12 @@ footer>section>h5 {
         grid-template-rows: auto;
     }
     /************    HEADER    ****************/
+
+    .section_logo {
+        margin-left: 40px;
+    }
+
+
     .img-hamburguesa {
         width: 35px;
         height: 35px;
@@ -848,7 +921,7 @@ footer>section>h5 {
         color: white;
     }
     #btn-carrito {
-        margin-right: 25px;
+        margin-right: 46px;
     }
     .avatar_header {
         width: 38px;
@@ -998,7 +1071,8 @@ footer>section>h5 {
     #detalle_carrito {
         font-size: 24px;
         width: 300px;
-        height: 280px;
+        height: 300px;
+        margin-right: 60px;
     }
     #detalle_carrito>table>tbody,
     tfoot>tr>td {
@@ -1434,10 +1508,6 @@ footer>section>h5 {
         margin-bottom: 20px;
     }
 
-    .btn-animacion2{
-        height: 500px;
-    }
-
 
     .btn-animacion3 {
         position: relative;
@@ -1445,9 +1515,8 @@ footer>section>h5 {
         height: 49px;
         width: 186px;
         border-radius: 50px;
-        text-transform: uppercase;
         background-color: transparent;
-        color: #fff;
+        color: #0F2147;
         font-size: 18px;
         overflow: hidden;
         transition: all 500ms ease;
@@ -1465,12 +1534,36 @@ footer>section>h5 {
     
 
     .btn-animacion3:hover {
-        background-color: #FFD700;
-        box-shadow: 0 0 10px #20e2d7, 0 0 20px #20e2d7, 0 0 20px #20e2d7;
-        color: #434343;
+        background-color: #ff6f1c;
+        box-shadow: 0 0 10px #f31717, 0 0 20px #f31717, 0 0 20px #f31717;
+        color: #000000;
     }
 
 
 
+    .btn-animacion2{
+        height: 190px;
+        font-size: 18px;
+    }
+    
 
+
+    /********** FIN DE BOTONES ANIMADOS ***********/
+
+
+    /******* SPINNER CARGAR DESKTOP ********/
+
+    .container .loader{
+        width: 200px;
+        height: 200px;
+        border: solid 20px #2E6E63;
+        border-top: solid 20px #3FE03F;
+    }
+
+
+    .container .message{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    
 }

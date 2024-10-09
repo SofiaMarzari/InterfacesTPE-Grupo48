@@ -122,12 +122,26 @@ function loadHome() {
                         document.querySelectorAll(".btn_carrusel_sig").forEach(function(btn) {
                             btn.addEventListener('click', translateFunctionSig);
                         });
+                        document.querySelector("header").classList.add("header-blur");
+                        document.querySelector("footer").classList.add("footer-blur");
                     }
                 )
             } else {
                 container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
             }
         }
+         /** JS DE EL LOADER **/
+        ,setTimeout(() => {
+            const loader = document.querySelector(".container");
+            loader.classList.add("container--hidden");
+            loader.addEventListener("trasitionend", () => {
+                document.body.removeChild(loader);
+            })
+
+            document.querySelector(".container-main").classList.remove("container-main-blur");
+            document.querySelector("header").classList.remove("header-blur");
+            document.querySelector("footer").classList.remove("footer-blur");
+            }, 5000)
     ).catch(function(response) {
         container_AJAX.innerHTML = '<h1>Error 505</h1>';
     })
@@ -613,4 +627,11 @@ function translateFunctionAnt() {
         div_carrusel.setAttribute('data-clicks', contClicks - 1);
         div_carrusel.setAttribute('data-valpx', translate_px);
     }
+
+
+
+    /** JS DE EL LOADER **/
+    setTimeout(() => {
+        alert("HOLA");
+    }, 2000);
 }
