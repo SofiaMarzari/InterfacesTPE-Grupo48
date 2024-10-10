@@ -146,6 +146,7 @@ header {
     border: none;
     border-radius: 20px;
     width: 80%;
+    padding-left: 10px;
 }
 
 .section_buscador>form>input::placeholder {
@@ -306,6 +307,7 @@ nav>hr {
     align-items: center;
     display: flex;
     padding-left: 15px;
+    cursor: pointer;
 }
 
 .btn-nav>img {
@@ -323,6 +325,7 @@ nav>hr {
     align-items: center;
     background-color: #ff6f1c;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .btn-contactanos>svg {
@@ -344,12 +347,14 @@ nav>hr {
     background: none;
     height: 30px;
     border: none;
+    cursor: pointer;
 }
 
 .img-redes {
     width: 15px;
     height: 15px;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .no-visible {
@@ -387,6 +392,9 @@ main {
     margin-bottom: 20px;
 }
 
+.btn-form{
+    cursor: pointer;
+}
 
 .btn-login-oauth {
     width: 200px;
@@ -526,7 +534,8 @@ main {
     border-style: none;
     background-color: #dedee2d1;
     height: 25px;
-    color: black;
+    color: var(--color_fondo_header_foot);
+    font-size: 14px;
 }
 
 .container_label_input>label {
@@ -911,6 +920,7 @@ footer>section>h5 {
     .section_buscador>form>input {
         width: 100%;
         height: 40px;
+        padding-left: 20px;
     }
     .img-lupa {
         width: 14px;
@@ -1181,6 +1191,10 @@ footer>section>h5 {
         display: flex;
         justify-content: space-around;
     }
+
+    .likesylogos>article>button{
+        cursor: pointer;
+    }
     .likesylogos>section {
         width: 182px;
     }
@@ -1276,6 +1290,9 @@ footer>section>h5 {
         width: 797px;
         opacity: 0.1;
         margin-top: 2px;
+    }
+    .likes>button{
+        cursor: pointer;
     }
     /******************fin - JUEGO EN EJECUCION*********************/
     /***************************************************************/
@@ -1459,6 +1476,7 @@ footer>section>h5 {
         margin-top: 50px;
         margin-bottom: 50px;
         border-style: none;
+        cursor:pointer;
     }
     
     .btn-animacion1::before{
@@ -1546,8 +1564,6 @@ footer>section>h5 {
         font-size: 18px;
     }
     
-
-
     /********** FIN DE BOTONES ANIMADOS ***********/
 
 
