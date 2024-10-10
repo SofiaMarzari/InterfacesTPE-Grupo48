@@ -43,7 +43,7 @@ let container_AJAX = document.getElementById('container_ajax');
 /**********************AJAX NAV***************************/
 /*********************************************************/
 function loadLogin(event) {
-    // event.preventDefault();
+    //event.preventDefault();
 
     fetch('../TP2/login.html').then(
         function(response) {
@@ -52,6 +52,8 @@ function loadLogin(event) {
                     function(h) {
                         container_AJAX.innerHTML = h;
                         document.getElementById('btn_registrarse_nav').addEventListener('click', loadRegistrarse);
+                        let form = document.querySelector('#form');
+                        form.addEventListener('submit', msjIniciarSesion); 
                     }
                 )
             } else {
@@ -62,6 +64,7 @@ function loadLogin(event) {
         container_AJAX.innerHTML = '<h1>Error 505</h1>';
     })
 }
+
 
 function loadRegistrarse() {
 
@@ -72,6 +75,9 @@ function loadRegistrarse() {
                 response.text().then(
                     function(h) {
                         container_AJAX.innerHTML = h;
+                        document.getElementById('btn_iniciarSesion_nav').addEventListener('click', loadLogin);
+                        let form = document.querySelector('#form');
+                        form.addEventListener('submit', msjRegistro); 
                     }
                 )
             } else {
@@ -82,6 +88,19 @@ function loadRegistrarse() {
         container_AJAX.innerHTML = '<h1>Error 505</h1>';
     })
 }
+
+function msjIniciarSesion(e){
+    e.preventDefault();
+    document.querySelector("#mensaje-login").innerHTML = ("¡¡ Ingreso con exito !!");
+    document.querySelector("#mensaje-login").classList.add("mensaje-animacion");
+}
+
+function msjRegistro(e){
+    e.preventDefault();
+    document.querySelector("#mensaje-login").innerHTML = ("¡¡ Registrado con exito !!");
+    document.querySelector("#mensaje-login").classList.add("mensaje-animacion");
+}
+
 
 document.getElementById('4_en_linea_nav').addEventListener('click', loadJuegoEnEjecucion);
 
@@ -632,8 +651,5 @@ function translateFunctionAnt() {
 
 
 
-    /** JS DE EL LOADER **/
-    setTimeout(() => {
-        alert("HOLA");
-    }, 2000);
+    
 }

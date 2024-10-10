@@ -9,7 +9,7 @@
         <p>o</p>
         <hr>
     </article>
-    <form class="formulario" action="iniciar_sesion" method="post" enctype="multipart/form-data">
+    <form id="form" class="formulario" action="" method="post" enctype="multipart/form-data">
         <div>
             <div class="container_label_input">
                 <label for="label-mail">Mail</label>
@@ -25,10 +25,13 @@
                 <img style="width: 60%;border-radius: 5px;" src="uploads/captcha.png" alt="captcha_img">
             </div>
         </div>
-        <button class="btn-animacion1">
+        <button class="btn-animacion1" id="btn-1">
             <span>  Ingresar  </span>
         </button>
+
+        <p id="mensaje-login"> </p>
     </form>
+    
     <section class="div_horizontal">
         <p style="margin-top: 0px; margin-bottom: 0px;font-family: system-ui;">¿No tienes una cuenta?</p>
         <button id="btn_registrarse_nav" style="background-color: rgba(212, 216, 212, 0.4);font-size: 12px;">Registrate</button>

@@ -559,6 +559,24 @@ main {
 }
 
 
+
+.mensaje-animacion {
+    animation: mover-izquierda-derecha 5s 1;
+    color: #3FE03F;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+@keyframes mover-izquierda-derecha {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(10px);
+    }
+}
 /******************fin - LOGIN/REGISTRO********************/
 
 
@@ -969,6 +987,7 @@ footer>section>h5 {
     .container_login {
         width: 623px;
         height: 700px;
+        margin-top: 40px;
     }
     .container_login>h2,
     .container_registro>h2 {
@@ -989,6 +1008,7 @@ footer>section>h5 {
         width: 409px;
         height: 35px;
         border: solid 1px #78C97A;
+        padding-left: 10px;
     }
    
     #btn_registrarse_nav {
@@ -1005,11 +1025,13 @@ footer>section>h5 {
     .container_registro {
         width: 700px;
         height: 790px;
+        margin-top: 40px;
     }
     .container_registro>div>.formulario>div>div>input {
         width: 250px;
         height: 28px;
         border: solid 1px #78C97A;
+        padding-left: 10px;
     }
 
     .container_registro>div>section>div {
