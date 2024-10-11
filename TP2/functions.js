@@ -119,10 +119,12 @@ function loadJuegoEnEjecucion() {
                 container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
             }
         }
+
     ).catch(function(response) {
         container_AJAX.innerHTML = '<h1>Error 505</h1>';
     })
 }
+
 
 document.getElementById('btn-home').addEventListener('click', loadHome);
 

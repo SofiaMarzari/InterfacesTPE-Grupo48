@@ -1221,10 +1221,32 @@ footer>section>h5 {
         width: 182px;
     }
     /*************************************/
+
+    /** IMAGENES DEL TUTORIAL DE YOUTUBE **/
+
+    #imgs_tutorial_section>div>img {
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    #imgs_tutorial_section>div>svg {
+        position: relative;
+        left: 50%;
+        margin-bottom: 50px;
+        z-index: 100;
+    }
+    #imgs_tutorial_section>div>img:hover {
+        transform: scale(1.1);
+        opacity: 0.6;
+        transition: 1s;
+    }
+    .youtubeIcon{
+        width: 75px;
+        height: 75px;
+    }
+
+
     .section_tutorial_juego {
-        /*medidas de figma: demasiado, se sale de la pantalla
-    width: 1440px;
-    height: 2959px;*/
         max-width: 90%;
         width: 1240px;
         height: 100%;
@@ -1284,17 +1306,19 @@ footer>section>h5 {
     .comentario_usuario {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         height: 160px;
         width: 799px;
     }
     #input-comentario {
-        border: 1px solid rgba(255, 255, 255, 0.295);
         background: none;
         font-size: 20px;
-        width: 600px;
-        height: 100px;
-        margin-top: 10px;
+        width: 789px;
+        height: 38px;
+        margin-top: 5px;
+        border-style: none;
+        border-bottom: 1px solid;
+        padding-left: 10px;
     }
     .perfil-comentario {
         display: flex;
@@ -1585,7 +1609,64 @@ footer>section>h5 {
         height: 190px;
         font-size: 18px;
     }
-    
+
+
+    /*** BOTON 4CHI ***/
+
+    .btn-animacion4 {
+        position: relative;
+        display: block;
+        height: 40px;
+        width: 250px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        background-color: transparent;
+        color: #fff;
+        font-size: 18px;
+        overflow: hidden;
+        transition: all 500ms ease;
+        border: 2px solid #20e2d7;
+        margin-bottom: 6px;
+        z-index: 0;
+        font-weight: 700;
+        cursor: pointer;
+        margin-left: 537px;
+        top: 2%;
+        background-color: rgba(255, 255, 255, 0.253);
+    }
+    .btn-animacion4::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: auto;
+        background-color: #20e2d7;
+        transition: all 500ms ease;
+        z-index: -1;
+      }
+
+    .btn--4::before {
+        left: -520px;
+        right: 0;
+        width: 100%;
+        height: 150%;
+        transition: all 750ms ease;
+        transform: rotate(45deg);
+        box-shadow: 0 0 10px #20e2d7, 0 0 20px #20e2d7, 0 0 20px #20e2d7;
+      }
+      .btn--4:hover::before {
+        left: 520px;
+    }
+      
+      @keyframes shadow-pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(32, 226, 215, 0.6);
+        }
+        100% {
+          box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0);
+        }
+      }
     /********** FIN DE BOTONES ANIMADOS ***********/
 
 
