@@ -200,6 +200,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 6;
 }
 
 #detalle_carrito>table {
@@ -230,6 +231,7 @@ tfoot>tr>td {
     background-color: var(--color_fondo_header_foot);
     top: 44.5px;
     right: 1px;
+    z-index: 6;
 }
 
 #detalle_perfil_avatar>div>ul {
@@ -272,6 +274,7 @@ nav {
     flex-direction: column;
     align-items: center;
     margin-top: 70px;
+    z-index: 6;
 }
 
 nav>a {

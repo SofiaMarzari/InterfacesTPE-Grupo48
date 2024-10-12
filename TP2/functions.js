@@ -37,166 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     loadLogin();
 });
-
-let botones_nav = document.querySelectorAll('.btn-nav');
-let container_AJAX = document.getElementById('container_ajax');
-/**********************AJAX NAV***************************/
-/*********************************************************/
-function loadLogin(event) {
-    //event.preventDefault();
-
-    fetch('../TP2/login.html').then(
-        function(response) {
-            if (response.ok) {
-                response.text().then(
-                    function(h) {
-                        container_AJAX.innerHTML = h;
-                        document.getElementById('btn_registrarse_nav').addEventListener('click', loadRegistrarse);
-                        let form = document.querySelector('#form');
-                        form.addEventListener('submit', msjIniciarSesion); 
-                    }
-                )
-            } else {
-                container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
-            }
-        }
-    ).catch(function(response) {
-        container_AJAX.innerHTML = '<h1>Error 505</h1>';
-    })
-}
-
-
-function loadRegistrarse() {
-
-    fetch('../TP2/registro.html').then(
-
-        function(response) {
-            if (response.ok) {
-                response.text().then(
-                    function(h) {
-                        container_AJAX.innerHTML = h;
-                        document.getElementById('btn_iniciarSesion_nav').addEventListener('click', loadLogin);
-                        let form = document.querySelector('#form');
-                        form.addEventListener('submit', msjRegistro); 
-                    }
-                )
-            } else {
-                container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
-            }
-        }
-    ).catch(function(response) {
-        container_AJAX.innerHTML = '<h1>Error 505</h1>';
-    })
-}
-
-function msjIniciarSesion(e){
-    e.preventDefault();
-    document.querySelector("#mensaje-login").innerHTML = ("¡¡ Ingreso con exito !!");
-    document.querySelector("#mensaje-login").classList.add("mensaje-animacion");
-}
-
-function msjRegistro(e){
-    e.preventDefault();
-    document.querySelector("#mensaje-login").innerHTML = ("¡¡ Registrado con exito !!");
-    document.querySelector("#mensaje-login").classList.add("mensaje-animacion");
-}
-
-
-document.getElementById('4_en_linea_nav').addEventListener('click', loadJuegoEnEjecucion);
-
-function loadJuegoEnEjecucion() {
-
-    fetch('../TP2/juego_ejecucion.html').then(
-
-        function(response) {
-            if (response.ok) {
-                response.text().then(
-                    function(h) {
-                        container_AJAX.innerHTML = h;
-                    }
-                )
-            } else {
-                container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
-            }
-        }
-
-    ).catch(function(response) {
-        container_AJAX.innerHTML = '<h1>Error 505</h1>';
-    })
-}
-
-
-document.getElementById('btn-home').addEventListener('click', loadHome);
-
-function loadHome() {
-    fetch('../TP2/home.html').then(
-        function(response) {
-            if (response.ok) {
-                response.text().then(
-                    function(h) {
-                        container_AJAX.innerHTML = h;
-                        cargar_cards_crear_carruseles();
-                        document.querySelectorAll(".btn_carrusel_ant").forEach(function(btn) {
-                            btn.addEventListener('click', translateFunctionAnt);
-                            btn.classList.add("no-visible");
-                        });
-                        document.querySelectorAll(".btn_carrusel_sig").forEach(function(btn) {
-                            btn.addEventListener('click', translateFunctionSig);
-                        });
-                        document.querySelector("header").classList.add("header-blur");
-                        document.querySelector("footer").classList.add("footer-blur");
-                    }
-                )
-            } else {
-                container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
-            }
-        }
-         /** JS DE EL LOADER **/
-        ,setTimeout(() => {
-            const loader = document.querySelector(".container");
-            loader.classList.add("container--hidden");
-            loader.addEventListener("trasitionend", () => {
-                document.body.removeChild(loader);
-            })
-
-            document.querySelector(".container-main").classList.remove("container-main-blur");
-            document.querySelector("header").classList.remove("header-blur");
-            document.querySelector("footer").classList.remove("footer-blur");
-            }, 5000)
-            
-            // Comentario de prueba para pushear y ver si se actualiza bien todo
-    ).catch(function(response) {
-        container_AJAX.innerHTML = '<h1>Error 505</h1>';
-    })
-}
-botones_nav.forEach(function(btn) {
-    btn.addEventListener('click', loadCategoria);
-});
-
-function loadCategoria(event) {
-    event.preventDefault();
-    let id_categoria = this.getAttribute('data-id');
-    /*se buscan los datos de la categoria segun su id_categoria...*/
-
-    fetch('../TP2/categoria.html').then(
-        function(response) {
-            if (response.ok) {
-                response.text().then(
-                    function(h) {
-                        container_AJAX.innerHTML = h;
-                    }
-                )
-            } else {
-                container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
-            }
-        }
-    ).catch(function(response) {
-        container_AJAX.innerHTML = '<h1>Error 505</h1>';
-    })
-}
-/**********************fin - AJAX NAV***************************/
-/*********************************************************/
-let categorias =
+let obj_categorias =
 [
     {
             "id": 1,
@@ -459,8 +300,281 @@ let categorias =
         ]
     }
 ];
-function cargar_cards_crear_carruseles() {
-    let section_carrusel = document.getElementById('section_carrusel');
+let obj_categorias_recomendados =
+[
+    {
+            "id": 1,
+            "nombre": "accion",
+            "cards": [
+                {
+                    "id": 1,
+                    "gratis": false,
+                    "precio": 2500,
+                    "descuento": 0,
+                    "nombre": "10 Minutes Terror",
+                    "obtenido": false
+                },
+                {
+                    "id": 2,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Chiken Dense",
+                    "obtenido": false
+                },
+                {
+                    "id": 3,
+                    "gratis": false,
+                    "precio": 2500,
+                    "descuento": 20,
+                    "nombre": "Cursed Treasty 3",
+                    "obtenido": true
+                },
+                {
+                    "id": 4,
+                    "gratis": false,
+                    "precio": 1000,
+                    "descuento": 0,
+                    "nombre": "Ninja Hands",
+                    "obtenido": true
+                },
+                {
+                    "id": 5,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Shorties Killer",
+                    "obtenido": false
+                },
+                {
+                    "id": 6,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Super Spin",
+                    "obtenido": false
+                },
+                {
+                    "id": 7,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Castle Wars",
+                    "obtenido": false
+                },
+                {
+                    "id": 8,
+                    "gratis": false,
+                    "precio": 10000,
+                    "descuento": 50,
+                    "nombre": "Build & Crush",
+                    "obtenido": false
+                },
+                {
+                    "id": 9,
+                    "gratis": false,
+                    "precio": 2000,
+                    "descuento": 0,
+                    "nombre": "Archer Master",
+                    "obtenido": true
+                },
+                {
+                    "id": 10,
+                    "gratis": false,
+                    "precio": 1900,
+                    "descuento": 0,
+                    "nombre": "Bloc Ops",
+                    "obtenido": false
+                }
+                ,
+                {
+                    "id": 11,
+                    "gratis": false,
+                    "precio": 99,
+                    "descuento": 0,
+                    "nombre": "Shadow Ninja",
+                    "obtenido": false
+                },
+                {
+                    "id": 12,
+                    "gratis": true,
+                    "precio": 0,
+                    "descuento": 0,
+                    "nombre": "Ninja Parkour",
+                    "obtenido": false
+                }
+            ]
+        }
+];
+let botones_nav = document.querySelectorAll('.btn-nav');
+let container_AJAX = document.getElementById('container_ajax');
+/**********************AJAX NAV***************************/
+/*********************************************************/
+function loadLogin(event) {
+    //event.preventDefault();
+
+    fetch('../TP2/login.html').then(
+        function(response) {
+            if (response.ok) {
+                response.text().then(
+                    function(h) {
+                        container_AJAX.innerHTML = h;
+                        document.getElementById('btn_registrarse_nav').addEventListener('click', loadRegistrarse);
+                        let form = document.querySelector('#form');
+                        form.addEventListener('submit', msjIniciarSesion); 
+                    }
+                )
+            } else {
+                container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
+            }
+        }
+    ).catch(function(response) {
+        container_AJAX.innerHTML = '<h1>Error 505</h1>';
+    })
+}
+
+
+function loadRegistrarse() {
+
+    fetch('../TP2/registro.html').then(
+
+        function(response) {
+            if (response.ok) {
+                response.text().then(
+                    function(h) {
+                        container_AJAX.innerHTML = h;
+                        document.getElementById('btn_iniciarSesion_nav').addEventListener('click', loadLogin);
+                        let form = document.querySelector('#form');
+                        form.addEventListener('submit', msjRegistro); 
+                    }
+                )
+            } else {
+                container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
+            }
+        }
+    ).catch(function(response) {
+        container_AJAX.innerHTML = '<h1>Error 505</h1>';
+    })
+}
+
+function msjIniciarSesion(e){
+    e.preventDefault();
+    document.querySelector("#mensaje-login").innerHTML = ("¡¡ Ingreso con exito !!");
+    document.querySelector("#mensaje-login").classList.add("mensaje-animacion");
+}
+
+function msjRegistro(e){
+    e.preventDefault();
+    document.querySelector("#mensaje-login").innerHTML = ("¡¡ Registrado con exito !!");
+    document.querySelector("#mensaje-login").classList.add("mensaje-animacion");
+}
+
+
+document.getElementById('4_en_linea_nav').addEventListener('click', loadJuegoEnEjecucion);
+
+function loadJuegoEnEjecucion() {
+
+    fetch('../TP2/juego_ejecucion.html').then(
+
+        function(response) {
+            if (response.ok) {
+                response.text().then(
+                    function(h) {
+                        container_AJAX.innerHTML = h;
+                        cargar_cards_crear_carruseles(obj_categorias_recomendados, 'section_carrusel_recomendados');
+                        document.querySelectorAll(".btn_carrusel_ant").forEach(function(btn) {
+                            btn.addEventListener('click', translateFunctionAnt);
+                            btn.classList.add("no-visible");
+                        });
+                        document.querySelectorAll(".btn_carrusel_sig").forEach(function(btn) {
+                            btn.addEventListener('click', translateFunctionSig);
+                        });
+                    }
+                )
+            } else {
+                container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
+            }
+        }
+
+    ).catch(function(response) {
+        container_AJAX.innerHTML = '<h1>Error 505</h1>';
+    })
+}
+
+
+document.getElementById('btn-home').addEventListener('click', loadHome);
+
+function loadHome() {
+    fetch('../TP2/home.html').then(
+        function(response) {
+            if (response.ok) {
+                response.text().then(
+                    function(h) {
+                        container_AJAX.innerHTML = h;
+                        cargar_cards_crear_carruseles(obj_categorias, 'section_carrusel');
+                        document.querySelectorAll(".btn_carrusel_ant").forEach(function(btn) {
+                            btn.addEventListener('click', translateFunctionAnt);
+                            btn.classList.add("no-visible");
+                        });
+                        document.querySelectorAll(".btn_carrusel_sig").forEach(function(btn) {
+                            btn.addEventListener('click', translateFunctionSig);
+                        });
+                        document.querySelector("header").classList.add("header-blur");
+                        document.querySelector("footer").classList.add("footer-blur");
+                    }
+                )
+            } else {
+                container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
+            }
+        }
+         /** JS DE EL LOADER **/
+        ,setTimeout(() => {
+            const loader = document.querySelector(".container");
+            loader.classList.add("container--hidden");
+            loader.addEventListener("trasitionend", () => {
+                document.body.removeChild(loader);
+            })
+
+            document.querySelector(".container-main").classList.remove("container-main-blur");
+            document.querySelector("header").classList.remove("header-blur");
+            document.querySelector("footer").classList.remove("footer-blur");
+            }, 5000)
+            
+            // Comentario de prueba para pushear y ver si se actualiza bien todo
+    ).catch(function(response) {
+        container_AJAX.innerHTML = '<h1>Error 505</h1>';
+    })
+}
+botones_nav.forEach(function(btn) {
+    btn.addEventListener('click', loadCategoria);
+});
+
+function loadCategoria(event) {
+    event.preventDefault();
+    let id_categoria = this.getAttribute('data-id');
+    /*se buscan los datos de la categoria segun su id_categoria...*/
+
+    fetch('../TP2/categoria.html').then(
+        function(response) {
+            if (response.ok) {
+                response.text().then(
+                    function(h) {
+                        container_AJAX.innerHTML = h;
+                    }
+                )
+            } else {
+                container_AJAX.innerHTML = '<h1>404 - Not Found!</h1>';
+            }
+        }
+    ).catch(function(response) {
+        container_AJAX.innerHTML = '<h1>Error 505</h1>';
+    })
+}
+/**********************fin - AJAX NAV***************************/
+/*********************************************************/
+
+function cargar_cards_crear_carruseles(categorias, nombre_section_contenedor) {
+    let section_carrusel = document.getElementById(nombre_section_contenedor);
 
     categorias.forEach(function(cat) {
         /***************************************************************************************************/
@@ -515,7 +629,7 @@ function cargar_cards_crear_carruseles() {
                     div.classList.add("etiqueta_card_agregado");
                     triangulo_img.setAttribute('src', 'uploads/triangulo_add.png');
                 }else{
-                    text_precio_o_agregado = document.createTextNode(card.precio);
+                    text_precio_o_agregado = document.createTextNode("$"+card.precio);
                     div.classList.add("etiqueta_card_pago");
                     triangulo_img.setAttribute('src', 'uploads/triangulo.png');
                 }
@@ -541,7 +655,11 @@ function cargar_cards_crear_carruseles() {
             let btn_icono = document.createElement('button');
             let icono = document.createElement('img');
             if (card.gratis === false) {
-                icono.setAttribute('src', 'uploads/iconos/boton-de-agregado-carrito.png');
+                if(card.obtenido){
+                    icono.setAttribute('src', 'uploads/marca-de-verificacion.png');
+                }else{
+                    icono.setAttribute('src', 'uploads/iconos/boton-de-agregado-carrito.png');
+                }
                 icono.setAttribute('width', '54');
                 icono.setAttribute('height', '54');
             } else {
