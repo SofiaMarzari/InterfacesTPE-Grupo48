@@ -471,14 +471,6 @@ function loadHome() {
                 response.text().then(
                     function(h) {
                         container_AJAX.innerHTML = h;
-                        cargar_cards_crear_carruseles(obj_categorias, 'section_carrusel');
-                        document.querySelectorAll(".btn_carrusel_ant").forEach(function(btn) {
-                            btn.addEventListener('click', translateFunctionAnt);
-                            btn.classList.add("no-visible");
-                        });
-                        document.querySelectorAll(".btn_carrusel_sig").forEach(function(btn) {
-                            btn.addEventListener('click', translateFunctionSig);
-                        });
                         document.querySelector("header").classList.add("header-blur");
                         document.querySelector("footer").classList.add("footer-blur");
                     }
@@ -498,6 +490,16 @@ function loadHome() {
             document.querySelector(".container-main").classList.remove("container-main-blur");
             document.querySelector("header").classList.remove("header-blur");
             document.querySelector("footer").classList.remove("footer-blur");
+
+            cargar_cards_crear_carruseles(obj_categorias, 'section_carrusel');
+            document.querySelectorAll(".btn_carrusel_ant").forEach(function(btn) {
+                btn.addEventListener('click', translateFunctionAnt);
+                btn.classList.add("no-visible");
+            });
+            document.querySelectorAll(".btn_carrusel_sig").forEach(function(btn) {
+                btn.addEventListener('click', translateFunctionSig);
+            });
+
             }, 5000)
             
             // Comentario de prueba para pushear y ver si se actualiza bien todo
@@ -680,6 +682,16 @@ function translateFunctionSig() {
         //animacion, se desliza el carrusel..NEXT->
         div_carrusel.style.transform = "translateX(" + translate_px + "%)";
         div_carrusel.style.transition = " all 1s"
+        //animacion, se cada card al moverse el carrusel
+        div_carrusel.childNodes.forEach(function(card){
+            //card.style.transform = "rotateY(3.142rad);";
+            card.style.transform = "skewX(15deg)";
+            card.style.transition = " all 1s"
+            setTimeout(function(){
+                card.style.transform = "rotateY(0)";
+                card.style.transition = " all 1s"
+            });
+        });
         contClicks++;
     }
     if (contClicks > cantidad_de_clicks) { //estoy viendo la ultima card...
@@ -726,8 +738,18 @@ function translateFunctionAnt() {
             }
         }
         //animacion, se desliza el carrusel..<-ANT
-        this.parentElement.children[2].style.transform = "translateX(" + translate_px + "%)";
-        this.parentElement.children[2].style.transition = " all 1s"
+        div_carrusel.style.transform = "translateX(" + translate_px + "%)";
+        div_carrusel.style.transition = " all 1s"
+         //animacion, se cada card al moverse el carrusel
+         div_carrusel.childNodes.forEach(function(card){
+            //card.style.transform = "rotateY(3.142rad);";
+            card.style.transform = "skewX(-15deg)";
+            card.style.transition = " all 1s"
+            setTimeout(function(){
+                card.style.transform = "rotateY(0)";
+                card.style.transition = " all 1s"
+            });
+        });
         //setteo valores a los atributos para que queden actualizados para el siguiente click(sig o ant)
         div_carrusel.setAttribute('data-clicks', contClicks - 1);
         div_carrusel.setAttribute('data-valpx', translate_px);
