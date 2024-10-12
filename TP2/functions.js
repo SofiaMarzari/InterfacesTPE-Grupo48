@@ -303,108 +303,68 @@ let obj_categorias =
 let obj_categorias_recomendados =
 [
     {
-            "id": 1,
-            "nombre": "accion",
-            "cards": [
-                {
-                    "id": 1,
-                    "gratis": false,
-                    "precio": 2500,
-                    "descuento": 0,
-                    "nombre": "10 Minutes Terror",
-                    "obtenido": false
-                },
-                {
-                    "id": 2,
-                    "gratis": true,
-                    "precio": 0,
-                    "descuento": 0,
-                    "nombre": "Chiken Dense",
-                    "obtenido": false
-                },
-                {
-                    "id": 3,
-                    "gratis": false,
-                    "precio": 2500,
-                    "descuento": 20,
-                    "nombre": "Cursed Treasty 3",
-                    "obtenido": true
-                },
-                {
-                    "id": 4,
-                    "gratis": false,
-                    "precio": 1000,
-                    "descuento": 0,
-                    "nombre": "Ninja Hands",
-                    "obtenido": true
-                },
-                {
-                    "id": 5,
-                    "gratis": true,
-                    "precio": 0,
-                    "descuento": 0,
-                    "nombre": "Shorties Killer",
-                    "obtenido": false
-                },
-                {
-                    "id": 6,
-                    "gratis": true,
-                    "precio": 0,
-                    "descuento": 0,
-                    "nombre": "Super Spin",
-                    "obtenido": false
-                },
-                {
-                    "id": 7,
-                    "gratis": true,
-                    "precio": 0,
-                    "descuento": 0,
-                    "nombre": "Castle Wars",
-                    "obtenido": false
-                },
-                {
-                    "id": 8,
-                    "gratis": false,
-                    "precio": 10000,
-                    "descuento": 50,
-                    "nombre": "Build & Crush",
-                    "obtenido": false
-                },
-                {
-                    "id": 9,
-                    "gratis": false,
-                    "precio": 2000,
-                    "descuento": 0,
-                    "nombre": "Archer Master",
-                    "obtenido": true
-                },
-                {
-                    "id": 10,
-                    "gratis": false,
-                    "precio": 1900,
-                    "descuento": 0,
-                    "nombre": "Bloc Ops",
-                    "obtenido": false
-                }
-                ,
-                {
-                    "id": 11,
-                    "gratis": false,
-                    "precio": 99,
-                    "descuento": 0,
-                    "nombre": "Shadow Ninja",
-                    "obtenido": false
-                },
-                {
-                    "id": 12,
-                    "gratis": true,
-                    "precio": 0,
-                    "descuento": 0,
-                    "nombre": "Ninja Parkour",
-                    "obtenido": false
-                }
-            ]
-        }
+        "id": 1,
+        "nombre": "aventura",
+        "cards": [
+            {
+                "id": 1,
+                "gratis": false,
+                "precio": 2000,
+                "descuento": 0,
+                "nombre": "Pikel Warfare",
+                "obtenido": true
+            },
+            {
+                "id": 2,
+                "gratis": true,
+                "precio": 4200,
+                "descuento": 0,
+                "nombre": "Sausage Dog",
+                "obtenido": false
+            },
+            {
+                "id": 3,
+                "gratis": true,
+                "precio": 0,
+                "descuento": 0,
+                "nombre": "Monster Mash",
+                "obtenido": false
+            },
+            {
+                "id": 4,
+                "gratis": false,
+                "precio": 500,
+                "descuento": 0,
+                "nombre": "Extraordinary",
+                "obtenido": false
+            },
+            {
+                "id": 5,
+                "gratis": true,
+                "precio": 720,
+                "descuento": 0,
+                "nombre": "Duck Life",
+                "obtenido": false
+            }
+            ,
+            {
+                "id": 6,
+                "gratis": false,
+                "precio": 720,
+                "descuento": 0,
+                "nombre": "Lineaje II",
+                "obtenido": true
+            },
+            {
+                "id": 7,
+                "gratis": true,
+                "precio": 0,
+                "descuento": 0,
+                "nombre": "Metro Escape",
+                "obtenido": false
+            }
+        ]
+    }
 ];
 let botones_nav = document.querySelectorAll('.btn-nav');
 let container_AJAX = document.getElementById('container_ajax');
@@ -579,9 +539,13 @@ function cargar_cards_crear_carruseles(categorias, nombre_section_contenedor) {
     categorias.forEach(function(cat) {
         /***************************************************************************************************/
         /*Titulo categoria carrusel*/
-        let h3 = document.createElement('h3');
-        let nom_categoria = document.createTextNode(cat.nombre.charAt(0).toUpperCase() + cat.nombre.slice(1));
-        h3.appendChild(nom_categoria);
+        if(nombre_section_contenedor!='section_carrusel_recomendados'){
+            let h3 = document.createElement('h3');
+            let nom_categoria = document.createTextNode(cat.nombre.charAt(0).toUpperCase() + cat.nombre.slice(1));
+            h3.appendChild(nom_categoria);
+            section_carrusel.appendChild(h3);
+        }
+        
         /***************************************************************************************************/
 
         /***************************************************************************************************/
@@ -684,7 +648,6 @@ function cargar_cards_crear_carruseles(categorias, nombre_section_contenedor) {
 
         /***************************************************************************************************/
         //muestro en section lo creado
-        section_carrusel.appendChild(h3);
         section_carrusel.appendChild(div_container_carrusel);
     });
 }
