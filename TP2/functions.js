@@ -47,7 +47,7 @@ let obj_categorias =
                     "id": 1,
                     "gratis": false,
                     "precio": 2500,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "10 Minutes Terror",
                     "obtenido": false
                 },
@@ -55,7 +55,7 @@ let obj_categorias =
                     "id": 2,
                     "gratis": true,
                     "precio": 0,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Chiken Dense",
                     "obtenido": false
                 },
@@ -63,7 +63,7 @@ let obj_categorias =
                     "id": 3,
                     "gratis": false,
                     "precio": 2500,
-                    "descuento": 20,
+                    "porcentaje_descuento": 20,
                     "nombre": "Cursed Treasty 3",
                     "obtenido": true
                 },
@@ -71,7 +71,7 @@ let obj_categorias =
                     "id": 4,
                     "gratis": false,
                     "precio": 1000,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Ninja Hands",
                     "obtenido": true
                 },
@@ -79,7 +79,7 @@ let obj_categorias =
                     "id": 5,
                     "gratis": true,
                     "precio": 0,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Shorties Killer",
                     "obtenido": false
                 },
@@ -87,7 +87,7 @@ let obj_categorias =
                     "id": 6,
                     "gratis": true,
                     "precio": 0,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Super Spin",
                     "obtenido": false
                 },
@@ -95,7 +95,7 @@ let obj_categorias =
                     "id": 7,
                     "gratis": true,
                     "precio": 0,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Castle Wars",
                     "obtenido": false
                 },
@@ -103,7 +103,7 @@ let obj_categorias =
                     "id": 8,
                     "gratis": false,
                     "precio": 10000,
-                    "descuento": 50,
+                    "porcentaje_descuento": 50,
                     "nombre": "Build & Crush",
                     "obtenido": false
                 },
@@ -111,7 +111,7 @@ let obj_categorias =
                     "id": 9,
                     "gratis": false,
                     "precio": 2000,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Archer Master",
                     "obtenido": true
                 },
@@ -119,7 +119,7 @@ let obj_categorias =
                     "id": 10,
                     "gratis": false,
                     "precio": 1900,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Bloc Ops",
                     "obtenido": false
                 }
@@ -128,7 +128,7 @@ let obj_categorias =
                     "id": 11,
                     "gratis": false,
                     "precio": 99,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Shadow Ninja",
                     "obtenido": false
                 },
@@ -136,7 +136,7 @@ let obj_categorias =
                     "id": 12,
                     "gratis": true,
                     "precio": 0,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Ninja Parkour",
                     "obtenido": false
                 }
@@ -150,7 +150,7 @@ let obj_categorias =
                     "id": 1,
                     "gratis": false,
                     "precio": 2000,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Pikel Warfare",
                     "obtenido": true
                 },
@@ -158,7 +158,7 @@ let obj_categorias =
                     "id": 2,
                     "gratis": true,
                     "precio": 4200,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Sausage Dog",
                     "obtenido": false
                 },
@@ -166,7 +166,7 @@ let obj_categorias =
                     "id": 3,
                     "gratis": true,
                     "precio": 0,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Monster Mash",
                     "obtenido": false
                 },
@@ -174,7 +174,7 @@ let obj_categorias =
                     "id": 4,
                     "gratis": false,
                     "precio": 500,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Extraordinary",
                     "obtenido": false
                 },
@@ -182,7 +182,7 @@ let obj_categorias =
                     "id": 5,
                     "gratis": true,
                     "precio": 720,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Duck Life",
                     "obtenido": false
                 }
@@ -191,7 +191,7 @@ let obj_categorias =
                     "id": 6,
                     "gratis": false,
                     "precio": 720,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Lineaje II",
                     "obtenido": true
                 },
@@ -199,7 +199,7 @@ let obj_categorias =
                     "id": 7,
                     "gratis": true,
                     "precio": 0,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Metro Escape",
                     "obtenido": false
                 }
@@ -213,7 +213,7 @@ let obj_categorias =
                     "id": 1,
                     "gratis": true,
                     "precio": 0,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Futbolito",
                     "obtenido": false
                 },
@@ -221,7 +221,7 @@ let obj_categorias =
                     "id": 2,
                     "gratis": false,
                     "precio": 0,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "City Racing",
                     "obtenido": true
                 },
@@ -229,7 +229,7 @@ let obj_categorias =
                     "id": 3,
                     "gratis": false,
                     "precio": 5000,
-                    "descuento": 20,
+                    "porcentaje_descuento": 20,
                     "nombre": "Basketball Seen",
                     "obtenido": false
                 },
@@ -237,7 +237,7 @@ let obj_categorias =
                     "id": 4,
                     "gratis": true,
                     "precio": 0,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Boxing v2",
                     "obtenido": false
                 },
@@ -245,7 +245,7 @@ let obj_categorias =
                     "id": 5,
                     "gratis": false,
                     "precio": 3700,
-                    "descuento": 20,
+                    "porcentaje_descuento": 20,
                     "nombre": "Drunken Box",
                     "obtenido": false
                 },
@@ -253,7 +253,7 @@ let obj_categorias =
                     "id": 6,
                     "gratis": false,
                     "precio": 2500,
-                    "descuento": 25,
+                    "porcentaje_descuento": 25,
                     "nombre": "Ajedrez",
                     "obtenido": false
                 },
@@ -261,7 +261,7 @@ let obj_categorias =
                     "id": 7,
                     "gratis": true,
                     "precio": 0,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Sky Balls",
                     "obtenido": false
                 },
@@ -269,7 +269,7 @@ let obj_categorias =
                     "id": 8,
                     "gratis": false,
                     "precio": 1010,
-                    "descuento": 25,
+                    "porcentaje_descuento": 25,
                     "nombre": "Pill Soccer",
                     "obtenido": false
                 },
@@ -277,7 +277,7 @@ let obj_categorias =
                     "id": 9,
                     "gratis": false,
                     "precio": 5300,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Tank Wars",
                     "obtenido": false
                 },
@@ -285,7 +285,7 @@ let obj_categorias =
                     "id": 10,
                     "gratis": false,
                     "precio": 5300,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Mini Battles",
                     "obtenido": true
                 },
@@ -293,7 +293,7 @@ let obj_categorias =
                     "id": 11,
                     "gratis": true,
                     "precio": 0,
-                    "descuento": 0,
+                    "porcentaje_descuento": 0,
                     "nombre": "Crash Cars",
                     "obtenido": false
                 }
@@ -310,7 +310,7 @@ let obj_categorias_recomendados =
                 "id": 1,
                 "gratis": false,
                 "precio": 2000,
-                "descuento": 0,
+                "porcentaje_descuento": 0,
                 "nombre": "Pikel Warfare",
                 "obtenido": true
             },
@@ -318,7 +318,7 @@ let obj_categorias_recomendados =
                 "id": 2,
                 "gratis": true,
                 "precio": 4200,
-                "descuento": 0,
+                "porcentaje_descuento": 0,
                 "nombre": "Sausage Dog",
                 "obtenido": false
             },
@@ -326,7 +326,7 @@ let obj_categorias_recomendados =
                 "id": 3,
                 "gratis": true,
                 "precio": 0,
-                "descuento": 0,
+                "porcentaje_descuento": 0,
                 "nombre": "Monster Mash",
                 "obtenido": false
             },
@@ -334,7 +334,7 @@ let obj_categorias_recomendados =
                 "id": 4,
                 "gratis": false,
                 "precio": 500,
-                "descuento": 0,
+                "porcentaje_descuento": 0,
                 "nombre": "Extraordinary",
                 "obtenido": false
             },
@@ -342,7 +342,7 @@ let obj_categorias_recomendados =
                 "id": 5,
                 "gratis": true,
                 "precio": 720,
-                "descuento": 0,
+                "porcentaje_descuento": 0,
                 "nombre": "Duck Life",
                 "obtenido": false
             }
@@ -351,7 +351,7 @@ let obj_categorias_recomendados =
                 "id": 6,
                 "gratis": false,
                 "precio": 720,
-                "descuento": 0,
+                "porcentaje_descuento": 0,
                 "nombre": "Lineaje II",
                 "obtenido": true
             },
@@ -359,7 +359,7 @@ let obj_categorias_recomendados =
                 "id": 7,
                 "gratis": true,
                 "precio": 0,
-                "descuento": 0,
+                "porcentaje_descuento": 0,
                 "nombre": "Metro Escape",
                 "obtenido": false
             }
@@ -541,8 +541,7 @@ function cargar_cards_crear_carruseles(categorias, nombre_section_contenedor) {
         /*Titulo categoria carrusel*/
         if(nombre_section_contenedor!='section_carrusel_recomendados'){
             let h3 = document.createElement('h3');
-            let nom_categoria = document.createTextNode(cat.nombre.charAt(0).toUpperCase() + cat.nombre.slice(1));
-            h3.appendChild(nom_categoria);
+            h3.appendChild(document.createTextNode(cat.nombre.charAt(0).toUpperCase() + cat.nombre.slice(1)));
             section_carrusel.appendChild(h3);
         }
         
@@ -562,13 +561,11 @@ function cargar_cards_crear_carruseles(categorias, nombre_section_contenedor) {
 
         /*Botones del carrusel*/
         let btn_carrusel_ant = document.createElement('button');
-        let text_btn_ant = document.createTextNode("<");
-        btn_carrusel_ant.appendChild(text_btn_ant);
+        btn_carrusel_ant.appendChild(document.createTextNode("<"));
         btn_carrusel_ant.classList.add("btn_carrusel_ant");
 
         let btn_carrusel_sig = document.createElement('button');
-        let text_btn_sig = document.createTextNode(">");
-        btn_carrusel_sig.appendChild(text_btn_sig);
+        btn_carrusel_sig.appendChild(document.createTextNode(">"));
         btn_carrusel_sig.classList.add("btn_carrusel_sig");
         if(cat.cards.length<4){
             btn_carrusel_sig.classList.add("no-visible");
@@ -585,19 +582,27 @@ function cargar_cards_crear_carruseles(categorias, nombre_section_contenedor) {
 
                 let div = document.createElement('div');
                 div.classList.add("etiqueta_card");
-                let text_precio_o_agregado="";
 
                 let triangulo_img = document.createElement('img');
                 if(card.obtenido){
-                    text_precio_o_agregado = document.createTextNode("Obtenido !");
+                    div.appendChild(document.createTextNode("Obtenido !"));
                     div.classList.add("etiqueta_card_agregado");
                     triangulo_img.setAttribute('src', 'uploads/triangulo_add.png');
                 }else{
-                    text_precio_o_agregado = document.createTextNode("$"+card.precio);
+                    if(card.porcentaje_descuento>0){
+                        let precio_antiguo = document.createElement("p");
+                        precio_antiguo.appendChild(document.createTextNode("$"+card.precio));
+                        precio_antiguo.classList.add("descuento");
+                        div.appendChild(precio_antiguo);
+                        let precio_con_descuento = parseInt(card.precio)-((parseInt(card.precio)/100)*card.porcentaje_descuento);
+                        div.appendChild(document.createTextNode("$"+precio_con_descuento));
+                    }else{
+                        div.appendChild(document.createTextNode("$"+card.precio));
+                    }
                     div.classList.add("etiqueta_card_pago");
                     triangulo_img.setAttribute('src', 'uploads/triangulo.png');
                 }
-                div.appendChild(text_precio_o_agregado);
+                
                 article_etiqueta.appendChild(div);
                 article_etiqueta.appendChild(triangulo_img);
 
@@ -613,8 +618,7 @@ function cargar_cards_crear_carruseles(categorias, nombre_section_contenedor) {
             let div_inferior = document.createElement('div');
             div_inferior.classList.add("rectangulo_inferior_card");
             let p_titulo = document.createElement('p');
-            let text_tit = document.createTextNode(card.nombre);
-            p_titulo.appendChild(text_tit);
+            p_titulo.appendChild(document.createTextNode(card.nombre));
             div_inferior.appendChild(p_titulo);
             let btn_icono = document.createElement('button');
             let icono = document.createElement('img');
@@ -623,13 +627,10 @@ function cargar_cards_crear_carruseles(categorias, nombre_section_contenedor) {
                     icono.setAttribute('src', 'uploads/marca-de-verificacion.png');
                 }else{
                     icono.setAttribute('src', 'uploads/iconos/boton-de-agregado-carrito.png');
+                    icono.classList.add("icono_maschico");
                 }
-                icono.setAttribute('width', '54');
-                icono.setAttribute('height', '54');
             } else {
                 icono.setAttribute('src', 'uploads/iconos/boton-de-play.png');
-                icono.setAttribute('width', '60');
-                icono.setAttribute('height', '60');
             }
 
             btn_icono.appendChild(icono);
