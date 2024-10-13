@@ -473,6 +473,7 @@ function loadHome() {
                         container_AJAX.innerHTML = h;
                         document.querySelector("header").classList.add("header-blur");
                         document.querySelector("footer").classList.add("footer-blur");
+                        document.querySelector("#ejecutar_4enlinea").addEventListener('click', loadJuegoEnEjecucion);
                     }
                 )
             } else {
