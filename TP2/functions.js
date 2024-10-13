@@ -631,6 +631,7 @@ function cargar_cards_crear_carruseles(categorias, nombre_section_contenedor) {
                 }else{
                     icono.setAttribute('src', 'uploads/iconos/boton-de-agregado-carrito.png');
                     icono.classList.add("icono_maschico");
+                    btn_icono.classList.add("agregar_al_carrito");
                 }
             } else {
                 icono.setAttribute('src', 'uploads/iconos/boton-de-play.png');
@@ -653,6 +654,17 @@ function cargar_cards_crear_carruseles(categorias, nombre_section_contenedor) {
         /***************************************************************************************************/
         //muestro en section lo creado
         section_carrusel.appendChild(div_container_carrusel);
+    });
+
+    document.querySelectorAll(".agregar_al_carrito").forEach(function(btn){
+        btn.addEventListener('click', function(){
+            var card = this.parentElement.parentElement;
+            card.children[2].children[1].children[0].setAttribute('src', 'uploads/marca-de-verificacion.png');
+            card.children[0].children[1].setAttribute('src', 'uploads/triangulo.png');
+            card.children[0].children[0].classList.remove("etiqueta_card_pago");
+            card.children[0].children[0].classList.add("etiqueta_card_agregado");
+            card.children[0].children[0].innerText = "Obtenido !";
+        })
     });
 }
 
