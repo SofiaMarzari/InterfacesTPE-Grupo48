@@ -683,15 +683,15 @@ function translateFunctionSig() {
         div_carrusel.style.transform = "translateX(" + translate_px + "%)";
         div_carrusel.style.transition = " all 1s"
         //animacion, se cada card al moverse el carrusel
-        div_carrusel.childNodes.forEach(function(card){
-            //card.style.transform = "rotateY(3.142rad);";
-            card.style.transform = "skewX(15deg)";
-            card.style.transition = " all 1s"
+        for(let i = 0; i < div_carrusel.children.length; i++){
+            div_carrusel.children[i].style.transform = "skewX(15deg)";
+            div_carrusel.children[i].style.transition = " all 1s"
             setTimeout(function(){
-                card.style.transform = "rotateY(0)";
-                card.style.transition = " all 1s"
-            });
-        });
+                div_carrusel.children[i].style.transform = "rotateY(0)";
+                div_carrusel.children[i].style.transition = " all 1s"
+            }, 500);
+        }
+
         contClicks++;
     }
     if (contClicks > cantidad_de_clicks) { //estoy viendo la ultima card...
@@ -740,16 +740,15 @@ function translateFunctionAnt() {
         //animacion, se desliza el carrusel..<-ANT
         div_carrusel.style.transform = "translateX(" + translate_px + "%)";
         div_carrusel.style.transition = " all 1s"
-         //animacion, se cada card al moverse el carrusel
-         div_carrusel.childNodes.forEach(function(card){
-            //card.style.transform = "rotateY(3.142rad);";
-            card.style.transform = "skewX(-15deg)";
-            card.style.transition = " all 1s"
+        //animacion, se cada card al moverse el carrusel
+        for(let i = 0; i < div_carrusel.children.length; i++){
+            div_carrusel.children[i].style.transform = "skewX(-15deg)";
+            div_carrusel.children[i].style.transition = " all 1s"
             setTimeout(function(){
-                card.style.transform = "rotateY(0)";
-                card.style.transition = " all 1s"
-            });
-        });
+                div_carrusel.children[i].style.transform = "rotateY(0)";
+                div_carrusel.children[i].style.transition = " all 1s"
+            }, 500);
+        }
         //setteo valores a los atributos para que queden actualizados para el siguiente click(sig o ant)
         div_carrusel.setAttribute('data-clicks', contClicks - 1);
         div_carrusel.setAttribute('data-valpx', translate_px);
