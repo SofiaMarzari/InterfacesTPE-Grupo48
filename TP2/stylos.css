@@ -723,9 +723,8 @@ footer>section>h5 {
 }
 
 .publicidad>img {
-    width: 1173px;
-    height: 149px;
-    margin-left: 15%;
+    width: 95%;
+    height: 100px;
     object-fit: cover;
 }
 
@@ -903,7 +902,7 @@ footer>section>h5 {
 .container .message{
     color: #ffffff;
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: message 1s alternate infinite ease-in-out;
@@ -920,6 +919,30 @@ footer>section>h5 {
 }
 
 
+.line-box{
+    padding: 2px;
+    width: 100%;
+    height: 20px;
+    border: 2px solid #267591;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.line-box .line {
+    height: 20px;
+    border-radius: 20px;
+    background: #67D295;
+    animation: loading 5s forwards cubic-bezier(0,0,0,0);
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
 
 /* solo para pantallas superiores a 1024px */
 
@@ -1368,6 +1391,11 @@ footer>section>h5 {
     .likes>button{
         cursor: pointer;
     }
+
+
+
+
+
     /******************fin - JUEGO EN EJECUCION*********************/
     /***************************************************************/
     /********************CARRUSELES*********************************/
@@ -1485,6 +1513,15 @@ footer>section>h5 {
     }
     /***************************************************************/
     /********************CARDS DESTACADAS*********************************/
+    .publicidad>img {
+        width: 1173px;
+        height: 149px;
+        margin-left: 15%;
+        object-fit: cover;
+    }
+
+
+
     .mas-jugados{
         width: 1318px;
         height: 467px;
@@ -1707,6 +1744,7 @@ footer>section>h5 {
     .container .message{
         font-size: 30px;
         font-weight: bold;
+        top: 40%;
     }
     
 }
