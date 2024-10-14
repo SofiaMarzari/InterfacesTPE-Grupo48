@@ -537,6 +537,18 @@ function loadHome() {
             document.querySelectorAll(".btn_carrusel_sig").forEach(function(btn) {
                 btn.addEventListener('click', translateFunctionSig);
             });
+            document.querySelectorAll(".carrusel_cards").forEach(function(c){
+                c.addEventListener('scroll', function(){
+                    this.childNodes.forEach(function(card){
+                        card.style.transform = "skewY(10deg)";
+                        card.style.transition = " all 0s"
+                        setTimeout(function(){
+                            card.style.transform = "rotateY(0)";
+                            card.style.transition = " all 1s"
+                        }, 1000);
+                    });
+                });
+            });
 
             }, 5000)
             

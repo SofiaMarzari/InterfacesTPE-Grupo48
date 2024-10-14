@@ -1312,17 +1312,27 @@ footer>section>h5 {
     /*************************************/
 
     /** IMAGENES DEL TUTORIAL DE YOUTUBE **/
-
+    #imgs_tutorial_section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #imgs_tutorial_section>div{
+        width: 306px;
+        position: relative;
+        height: 162px;
+    }
     #imgs_tutorial_section>div>img {
         cursor: pointer;
         transition: 1s;
     }
 
     #imgs_tutorial_section>div>svg {
-        position: relative;
-        left: 50%;
-        margin-bottom: 50px;
+        position: absolute;
+        left: 40%;
         z-index: 100;
+        top: 25%;
+        cursor: pointer;
     }
     #imgs_tutorial_section>div>img:hover {
         transform: scale(1.1);
