@@ -74,7 +74,7 @@ footer {
 .layout {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto 19%;
+    grid-template-rows: auto auto auto;
     grid-template-areas: "header" "main" "footer";
 }
 
@@ -700,7 +700,6 @@ footer>section>h5 {
     justify-content: center;
     margin-left: 5%;
     margin-top: 31px;
-    margin-bottom: 31px;
 }
 
 /* MOBILE FIRST */
@@ -1382,6 +1381,7 @@ footer>section>h5 {
     
     .recomendados-para-ti>.carrusel-categorias{
         padding-left: 0px !important;
+        width: 1240px;
     }
     .section_tutorial_juego>div>article>p {
         font-family: 'Nunito';
@@ -1445,11 +1445,17 @@ footer>section>h5 {
     }
 
 
-
-
+    /**** publicidades ****/
+    .publicidad-juego{
+        display: flex;
+        flex-direction: column;
+    }
 
     /******************fin - JUEGO EN EJECUCION*********************/
     /***************************************************************/
+
+
+
     /********************CARRUSELES*********************************/
     /********card*******/
     /*div.translate {
