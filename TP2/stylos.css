@@ -746,6 +746,7 @@ footer>section>h5 {
     display: flex;
     flex-direction: row;
     margin-bottom: 31px;
+    height: 220px;
 }
 
 .carrusel_cards {
@@ -757,6 +758,8 @@ footer>section>h5 {
     align-self: stretch;
     overflow-x: scroll;
     padding-top: 20px;
+    height: 100%;
+    padding-left: 5px;
 }
 
 .carrusel_cards>.card {
@@ -852,6 +855,45 @@ footer>section>h5 {
     font-size: 12px;
     color: #282828;
     margin-right: 5px;
+}
+/************div hover detalle card*********/
+.card:hover{
+    box-shadow: 4px 8px 10px #000000ba;
+}
+.opacity_box{
+    opacity: 0.2;
+}
+.mas-detalle-card{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #000000d6;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: solid 1px var(--acento);
+    align-content: center;
+    text-align: center;
+}
+.mas-detalle-card>p{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0px 5px 0px 5px;
+}
+.subdiv_puntajes{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    margin-left: 40%;
+    margin-top: 30px;
+}
+.subdiv_puntajes>p{
+    font-size: 20px;
+}
+.subdiv_puntajes>img{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
 }
 
 /******** SPINNER DE CARGA ********/
@@ -1411,6 +1453,7 @@ footer>section>h5 {
         margin-bottom: 31px;
         position: relative;
         padding-top: 20px;
+        height: 100%;
     }
     .btn_carrusel_ant {
         z-index: 4;
@@ -1444,6 +1487,8 @@ footer>section>h5 {
         align-self: stretch;
         overflow-x: unset;
         padding-top: 0px;
+        height: 250px;
+        padding-left: 0px;
     }
     .card{
         background-color: #E3E3E3;
@@ -1516,11 +1561,9 @@ footer>section>h5 {
     .publicidad>img {
         width: 1173px;
         height: 149px;
-        margin-left: 15%;
+        /*margin-left: 15%;*/
         object-fit: cover;
     }
-
-
 
     .mas-jugados{
         width: 1318px;

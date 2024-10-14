@@ -49,7 +49,8 @@ let obj_categorias =
                     "precio": 2500,
                     "porcentaje_descuento": 0,
                     "nombre": "10 Minutes Terror",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 5.0
                 },
                 {
                     "id": 2,
@@ -57,7 +58,8 @@ let obj_categorias =
                     "precio": 0,
                     "porcentaje_descuento": 0,
                     "nombre": "Chiken Dense",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 3.2
                 },
                 {
                     "id": 3,
@@ -65,7 +67,8 @@ let obj_categorias =
                     "precio": 2500,
                     "porcentaje_descuento": 20,
                     "nombre": "Cursed Treasty 3",
-                    "obtenido": true
+                    "obtenido": true,
+                    "calificacion": 4.1
                 },
                 {
                     "id": 4,
@@ -73,7 +76,8 @@ let obj_categorias =
                     "precio": 1000,
                     "porcentaje_descuento": 0,
                     "nombre": "Ninja Hands",
-                    "obtenido": true
+                    "obtenido": true,
+                    "calificacion": 5.0
                 },
                 {
                     "id": 5,
@@ -81,7 +85,8 @@ let obj_categorias =
                     "precio": 0,
                     "porcentaje_descuento": 0,
                     "nombre": "Shorties Killer",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 2.2
                 },
                 {
                     "id": 6,
@@ -89,7 +94,8 @@ let obj_categorias =
                     "precio": 0,
                     "porcentaje_descuento": 0,
                     "nombre": "Super Spin",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 5.0
                 },
                 {
                     "id": 7,
@@ -97,7 +103,8 @@ let obj_categorias =
                     "precio": 0,
                     "porcentaje_descuento": 0,
                     "nombre": "Castle Wars",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 2.4
                 },
                 {
                     "id": 8,
@@ -105,7 +112,8 @@ let obj_categorias =
                     "precio": 10000,
                     "porcentaje_descuento": 50,
                     "nombre": "Build & Crush",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 5.0
                 },
                 {
                     "id": 9,
@@ -113,7 +121,8 @@ let obj_categorias =
                     "precio": 2000,
                     "porcentaje_descuento": 0,
                     "nombre": "Archer Master",
-                    "obtenido": true
+                    "obtenido": true,
+                    "calificacion": 1.6
                 },
                 {
                     "id": 10,
@@ -121,7 +130,8 @@ let obj_categorias =
                     "precio": 1900,
                     "porcentaje_descuento": 0,
                     "nombre": "Bloc Ops",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 3.5
                 }
                 ,
                 {
@@ -130,7 +140,8 @@ let obj_categorias =
                     "precio": 99,
                     "porcentaje_descuento": 0,
                     "nombre": "Shadow Ninja",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 5.0
                 },
                 {
                     "id": 12,
@@ -138,7 +149,8 @@ let obj_categorias =
                     "precio": 0,
                     "porcentaje_descuento": 0,
                     "nombre": "Ninja Parkour",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 5.0
                 }
             ]
         },
@@ -152,7 +164,8 @@ let obj_categorias =
                     "precio": 2000,
                     "porcentaje_descuento": 0,
                     "nombre": "Pikel Warfare",
-                    "obtenido": true
+                    "obtenido": true,
+                    "calificacion": 4.0
                 },
                 {
                     "id": 2,
@@ -160,7 +173,8 @@ let obj_categorias =
                     "precio": 4200,
                     "porcentaje_descuento": 0,
                     "nombre": "Sausage Dog",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 5.0
                 },
                 {
                     "id": 3,
@@ -168,7 +182,8 @@ let obj_categorias =
                     "precio": 0,
                     "porcentaje_descuento": 0,
                     "nombre": "Monster Mash",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 5.0
                 },
                 {
                     "id": 4,
@@ -176,7 +191,8 @@ let obj_categorias =
                     "precio": 500,
                     "porcentaje_descuento": 0,
                     "nombre": "Extraordinary",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 4.1
                 },
                 {
                     "id": 5,
@@ -184,7 +200,8 @@ let obj_categorias =
                     "precio": 720,
                     "porcentaje_descuento": 0,
                     "nombre": "Duck Life",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 5.0
                 }
                 ,
                 {
@@ -193,7 +210,8 @@ let obj_categorias =
                     "precio": 720,
                     "porcentaje_descuento": 0,
                     "nombre": "Lineaje II",
-                    "obtenido": true
+                    "obtenido": true,
+                    "calificacion": 4.5
                 },
                 {
                     "id": 7,
@@ -201,7 +219,8 @@ let obj_categorias =
                     "precio": 0,
                     "porcentaje_descuento": 0,
                     "nombre": "Metro Escape",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 5.0
                 }
             ]
         },
@@ -215,7 +234,8 @@ let obj_categorias =
                     "precio": 0,
                     "porcentaje_descuento": 0,
                     "nombre": "Futbolito",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 3.1
                 },
                 {
                     "id": 2,
@@ -223,7 +243,8 @@ let obj_categorias =
                     "precio": 0,
                     "porcentaje_descuento": 0,
                     "nombre": "City Racing",
-                    "obtenido": true
+                    "obtenido": true,
+                    "calificacion": 5.0
                 },
                 {
                     "id": 3,
@@ -231,7 +252,8 @@ let obj_categorias =
                     "precio": 5000,
                     "porcentaje_descuento": 20,
                     "nombre": "Basketball Seen",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 4.3
                 },
                 {
                     "id": 4,
@@ -239,7 +261,8 @@ let obj_categorias =
                     "precio": 0,
                     "porcentaje_descuento": 0,
                     "nombre": "Boxing v2",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 2.0
                 },
                 {
                     "id": 5,
@@ -247,7 +270,8 @@ let obj_categorias =
                     "precio": 3700,
                     "porcentaje_descuento": 20,
                     "nombre": "Drunken Box",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 5.0
                 },
                 {
                     "id": 6,
@@ -255,7 +279,8 @@ let obj_categorias =
                     "precio": 2500,
                     "porcentaje_descuento": 25,
                     "nombre": "Ajedrez",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 5.0
                 },
                 {
                     "id": 7,
@@ -263,7 +288,8 @@ let obj_categorias =
                     "precio": 0,
                     "porcentaje_descuento": 0,
                     "nombre": "Sky Balls",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 4.5
                 },
                 {
                     "id": 8,
@@ -271,7 +297,8 @@ let obj_categorias =
                     "precio": 1010,
                     "porcentaje_descuento": 25,
                     "nombre": "Pill Soccer",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 5.0
                 },
                 {
                     "id": 9,
@@ -279,7 +306,8 @@ let obj_categorias =
                     "precio": 5300,
                     "porcentaje_descuento": 0,
                     "nombre": "Tank Wars",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 3.5
                 },
                 {
                     "id": 10,
@@ -287,7 +315,8 @@ let obj_categorias =
                     "precio": 5300,
                     "porcentaje_descuento": 0,
                     "nombre": "Mini Battles",
-                    "obtenido": true
+                    "obtenido": true,
+                    "calificacion": 5.0
                 },
                 {
                     "id": 11,
@@ -295,7 +324,8 @@ let obj_categorias =
                     "precio": 0,
                     "porcentaje_descuento": 0,
                     "nombre": "Crash Cars",
-                    "obtenido": false
+                    "obtenido": false,
+                    "calificacion": 5.0
                 }
         ]
     }
@@ -312,7 +342,8 @@ let obj_categorias_recomendados =
                 "precio": 2000,
                 "porcentaje_descuento": 0,
                 "nombre": "Pikel Warfare",
-                "obtenido": true
+                "obtenido": true,
+                "calificacion": 4.0
             },
             {
                 "id": 2,
@@ -320,7 +351,8 @@ let obj_categorias_recomendados =
                 "precio": 4200,
                 "porcentaje_descuento": 0,
                 "nombre": "Sausage Dog",
-                "obtenido": false
+                "obtenido": false,
+                "calificacion": 5.0
             },
             {
                 "id": 3,
@@ -328,7 +360,8 @@ let obj_categorias_recomendados =
                 "precio": 0,
                 "porcentaje_descuento": 0,
                 "nombre": "Monster Mash",
-                "obtenido": false
+                "obtenido": false,
+                "calificacion": 5.0
             },
             {
                 "id": 4,
@@ -336,7 +369,8 @@ let obj_categorias_recomendados =
                 "precio": 500,
                 "porcentaje_descuento": 0,
                 "nombre": "Extraordinary",
-                "obtenido": false
+                "obtenido": false,
+                "calificacion": 4.1
             },
             {
                 "id": 5,
@@ -344,7 +378,8 @@ let obj_categorias_recomendados =
                 "precio": 720,
                 "porcentaje_descuento": 0,
                 "nombre": "Duck Life",
-                "obtenido": false
+                "obtenido": false,
+                "calificacion": 5.0
             }
             ,
             {
@@ -353,7 +388,8 @@ let obj_categorias_recomendados =
                 "precio": 720,
                 "porcentaje_descuento": 0,
                 "nombre": "Lineaje II",
-                "obtenido": true
+                "obtenido": true,
+                "calificacion": 4.5
             },
             {
                 "id": 7,
@@ -361,7 +397,8 @@ let obj_categorias_recomendados =
                 "precio": 0,
                 "porcentaje_descuento": 0,
                 "nombre": "Metro Escape",
-                "obtenido": false
+                "obtenido": false,
+                "calificacion": 5.0
             }
         ]
     }
@@ -640,6 +677,39 @@ function cargar_cards_crear_carruseles(categorias, nombre_section_contenedor) {
             btn_icono.appendChild(icono);
             div_inferior.appendChild(btn_icono);
             article_card.appendChild(div_inferior); //lo agrego a la card
+
+            /******************************************* */
+            let div_mas_detalle = document.createElement("div");
+            div_mas_detalle.classList.add("mas-detalle-card");
+
+            let sub_div_puntaje = document.createElement("div");
+            let puntaje_estrellas = document.createElement("p");
+            puntaje_estrellas.appendChild(document.createTextNode(card.calificacion));
+            let img_estrella_icono = document.createElement("img");
+            img_estrella_icono.setAttribute('src', 'uploads/estrella_puntos.png');
+            sub_div_puntaje.appendChild(puntaje_estrellas);
+            sub_div_puntaje.appendChild(img_estrella_icono);
+            sub_div_puntaje.classList.add("subdiv_puntajes");
+
+            let p_nombre_completo =document.createElement("p");
+            p_nombre_completo.appendChild(document.createTextNode(card.nombre));
+
+            div_mas_detalle.appendChild(p_nombre_completo);
+            div_mas_detalle.appendChild(sub_div_puntaje);
+           
+            article_card.appendChild(div_mas_detalle);
+            article_card.onmouseover = function(){
+                div_mas_detalle.classList.add("visible");
+                p_titulo.classList.add("opacity_box");
+               /* if(card.obtenido===false){*/
+                    btn_icono.style = " z-index:6; ";
+              /*  }*/
+            }
+            article_card.onmouseout = function(){
+                div_mas_detalle.classList.remove("visible");
+                p_titulo.classList.remove("opacity_box");
+            }
+            /******************************************* */
 
             /*guardo la card en el carrusel*/
             carrusel.appendChild(article_card);
