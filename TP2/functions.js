@@ -742,7 +742,7 @@ function cargar_cards_crear_carruseles(categorias, nombre_section_contenedor) {
         btn.addEventListener('click', function(){
             var card = this.parentElement.parentElement;
             card.children[2].children[1].children[0].setAttribute('src', 'uploads/marca-de-verificacion.png');
-            card.children[0].children[1].setAttribute('src', 'uploads/triangulo.png');
+            card.children[0].children[1].setAttribute('src', 'uploads/triangulo_add.png');
             card.children[0].children[0].classList.remove("etiqueta_card_pago");
             card.children[0].children[0].classList.add("etiqueta_card_agregado");
             card.children[0].children[0].innerText = "Obtenido !";
