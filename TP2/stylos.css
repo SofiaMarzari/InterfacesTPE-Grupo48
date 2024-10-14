@@ -638,7 +638,7 @@ footer>section>h5 {
     max-width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto 300px;
+    grid-template-rows: auto auto auto auto;
     color: white;
     grid-template-areas: "topjuegos" "hr" "carruseles" "publicidad";
 }
@@ -696,11 +696,11 @@ footer>section>h5 {
 }
 
 .publicidad {
-    grid-area: publicidad;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     margin-left: 5%;
+    margin-top: 31px;
+    margin-bottom: 31px;
 }
 
 /* MOBILE FIRST */
@@ -1561,8 +1561,11 @@ footer>section>h5 {
     .publicidad>img {
         width: 1173px;
         height: 149px;
-        /*margin-left: 15%;*/
         object-fit: cover;
+    }
+
+    .publicidad{
+        margin-left: 0px;
     }
 
     .mas-jugados{
